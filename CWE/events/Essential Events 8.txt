@@ -18,7 +18,7 @@ CHI = { exists = no }
 TIB = { exists = no }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 }
 
@@ -57,8 +57,8 @@ prestige = 50
 government = democracy
 country_event = 800054
 add_country_modifier = { name = revolution_chaos duration = 7300 }
-any_owned = { 
-limit = { OR = { 
+any_owned = {
+limit = { OR = {
 is_core = FUJ
 is_core = MCK
 is_core = KWA
@@ -66,8 +66,8 @@ is_core = YNN
 is_core = GGX
 is_core = TIB
 is_core = ETS
-is_core = IMN 
-} } 
+is_core = IMN
+} }
 add_province_modifier = { name = nationalist_agitation duration = 10000 } }
 ai_chance = { factor = 0.6 }
 		}
@@ -190,7 +190,7 @@ exists = KUW
 NOT = { government = democracy }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 5
 	}
 
@@ -238,7 +238,7 @@ government = democracy
 OR = { exists = CRO exists = MON exists = BOS exists = SLO exists = MAC }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 5
 	}
 
@@ -292,7 +292,7 @@ year = 1951
 exists = HND
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 5
 	}
 
@@ -335,7 +335,7 @@ UAE = { OR = { government = hms_government1 government = hms_government governme
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -383,7 +383,7 @@ NOT = { literacy = 0.25 }
 OR = { capitalism = 1 year = 1991 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 72
 	}
 
@@ -392,12 +392,12 @@ name = "Raise interest rates to prevent the Thai Baht from imploding!"
 prestige = 50
 country_event = 1512007
 
-any_country = { 
+any_country = {
 
-limit = { 
-NOT = { government = proletarian_dictatorship } 
+limit = {
+NOT = { government = proletarian_dictatorship }
 OR = { tag = IDO tag = PHI tag = SKO tag = MSY }
-} 
+}
 
 country_event = 1512007
 
@@ -485,7 +485,7 @@ exists = PHI
 exists = BUR
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -522,7 +522,7 @@ SYR = { exists = yes }
 IRQ = { exists = yes }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 12
 	}
 
@@ -567,7 +567,7 @@ random_country = { limit = { OR = { tag = EGY tag = SUD tag = SYR tag = IRQ } } 
 
 random_country = { limit = { exists = yes tag = TRI } change_tag = UAR }
 
-random_country = { limit = { exists = yes OR = { tag = TRI tag = UAR } } create_vassal = THIS } 
+random_country = { limit = { exists = yes OR = { tag = TRI tag = UAR } } create_vassal = THIS }
 
 prestige = 25
 ai_chance = { factor = 0.2 }
@@ -599,7 +599,7 @@ has_country_flag = chinese_democracy
 NOT = { has_country_modifier = chinese_democracy }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 6
 	}
 
@@ -632,8 +632,8 @@ prestige_factor = -0.25
 
 add_country_modifier = { name = revolution_chaos duration = 3650 }
 
-any_owned = { 
-limit = { OR = { 
+any_owned = {
+limit = { OR = {
 is_core = FUJ
 is_core = MCK
 is_core = KWA
@@ -641,8 +641,8 @@ is_core = YNN
 is_core = GGX
 is_core = TIB
 is_core = ETS
-is_core = IMN 
-} } 
+is_core = IMN
+} }
 
 add_province_modifier = { name = nationalist_agitation duration = 10000 } }
 
@@ -666,7 +666,7 @@ NOT = { government = proletarian_dictatorship }
 IDO = { has_country_flag = ido_thaw_trigger }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 12
 	}
 
@@ -718,7 +718,7 @@ COM = { exists = no }
 owns = 2123
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 4
 	}
 
@@ -726,13 +726,13 @@ option = {
 name = "Grant self-autonomy"
 release_vassal = COM
 diplomatic_influence = { who = COM value = 200 }
-COM = { government = colonial_government 
+COM = { government = colonial_government
 country_event = 800054 ruling_party_ideology = conservative
-any_pop = { 
+any_pop = {
 ideology = {
 	factor = 0.9
 	value = conservative
-	} 
+	}
 		}
 }
 ai_chance = { factor = 0.9 }
@@ -764,7 +764,7 @@ is_our_vassal = COM
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 5
 	}
 
@@ -774,11 +774,11 @@ release_vassal = COM
 diplomatic_influence = { who = COM value = 200 }
 COM = { government = democracy
 ruling_party_ideology = socialist
-any_pop = { 
+any_pop = {
 ideology = {
 	factor = 0.9
 	value = socialist
-	} 
+	}
 		}
 }
 ai_chance = { factor = 0.9 }
@@ -790,11 +790,11 @@ prestige = -50
 
 COM = {
 ruling_party_ideology = nationalist
-any_pop = { 
+any_pop = {
 ideology = {
 	factor = 0.9
 	value = nationalist
-	} 
+	}
 		}
 }
 
@@ -814,7 +814,7 @@ is_triggered_only = yes
 
 option = {
 name = "Lets see the result"
-random_list = { 
+random_list = {
 
 90 = { government = democracy }
 
@@ -842,7 +842,7 @@ OR = { government = hms_government government = democracy }
 is_our_vassal = VAN
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 5
 	}
 
@@ -852,7 +852,7 @@ prestige = 25
 release_vassal = VAN
 VAN = { government = democracy country_event = 800054 }
 diplomatic_influence = { who = VAN value = 200 }
-FRA = { diplomatic_influence = { who = VAN value = -110 } } 
+FRA = { diplomatic_influence = { who = VAN value = -110 } }
 random_country = { limit = { is_our_vassal = VAN OR = { tag = FRA tag = ENG } } relation = { who = THIS value = -25 } }
 ai_chance = { factor = 0.9 }
 		}
@@ -879,8 +879,8 @@ name = "Send a strongly worded complaint to the $FROMCOUNTRY_ADJ$ Embassy!"
 prestige = 25
 relation = { who = FROM value = -50 }
 set_country_flag = icj_marker
-ai_chance = { 
-factor = 1 
+ai_chance = {
+factor = 1
 modifier = { factor = 0 relation = { who = FROM value = 0 } }
 }
 		}
@@ -890,8 +890,8 @@ name = "Release a statement agreeing to cooperate with the ICJ"
 prestige = -25
 relation = { who = FROM value = 50 }
 set_country_flag = icj_marker
-ai_chance = { 
-factor = 1 
+ai_chance = {
+factor = 1
 modifier = { factor = 0 NOT = { relation = { who = FROM value = 0 } } }
 }
 		}
@@ -908,15 +908,15 @@ title = "$COUNTRY_ADJ$ Territorial Dispute Result"
 trigger = {
 NOT = { all_core = { owned_by = THIS } }
 NOT = { badboy = 0.8 }
-NOT = { has_country_modifier = icj_in_process }			
-has_country_flag = icj_in_process	
+NOT = { has_country_modifier = icj_in_process }
+has_country_flag = icj_in_process
 }
 
 option = {
 name = "The Judges of the ICJ have spoken"
 clr_country_flag = icj_in_process
 add_country_modifier = { name = icj_timer_land duration = 3650 }
-random_list = { 
+random_list = {
 	50 = { THIS = { country_event = 1512019 } }
 	50 = { THIS = { country_event = 1512020 } }
 }
@@ -938,24 +938,24 @@ name = "Let's celebrate!"
 prestige = 100
 
 
-random_country = { 
+random_country = {
 
-limit = { 
-has_country_flag = international_court_of_justice 
+limit = {
+has_country_flag = international_court_of_justice
 has_country_flag = icj_marker
-is_vassal = no 
-war = no 
+is_vassal = no
+war = no
 
-any_owned_province = { is_capital = no is_core = THIS } 
+any_owned_province = { is_capital = no is_core = THIS }
 
 NOT = { any_owned_province = { is_capital = yes is_core = THIS } }
 
-neighbour = THIS 
-} 
+neighbour = THIS
+}
 
 clr_country_flag = icj_marker
 
-country_event = { id = 1512021 days = 10 } 
+country_event = { id = 1512021 days = 10 }
 
 }
 		}
@@ -977,22 +977,22 @@ prestige_factor = -0.1
 
 any_pop = { militancy = 1 }
 
-random_country = { 
+random_country = {
 
-limit = { 
-has_country_flag = international_court_of_justice 
+limit = {
+has_country_flag = international_court_of_justice
 has_country_flag = icj_marker
-is_vassal = no 
-war = no 
+is_vassal = no
+war = no
 
-any_owned_province = { is_capital = no is_core = THIS } 
+any_owned_province = { is_capital = no is_core = THIS }
 
 NOT = { any_owned_province = { is_capital = yes is_core = THIS } }
 
-neighbour = THIS 
-} 
+neighbour = THIS
+}
 
-clr_country_flag = icj_marker 
+clr_country_flag = icj_marker
 
 }
 
@@ -1018,8 +1018,8 @@ clr_country_flag = icj_marker
 any_owned = { limit = { is_capital = no is_core = FROM } remove_core = THIS secede_province = FROM }
 
 
-ai_chance = { 
-factor = 1 
+ai_chance = {
+factor = 1
 modifier = { factor = 0 NOT = { OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive } } }
 }
 		}
@@ -1032,8 +1032,8 @@ FROM = { relation = { who = THIS value = -100 } country_event = { id = 1512022 d
 
 any_owned = { limit = { is_core = FROM } add_province_modifier = { name = nationalist_agitation duration = 3650 } }
 clr_country_flag = icj_marker
-ai_chance = { 
-factor = 1 
+ai_chance = {
+factor = 1
 modifier = { factor = 0 OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive } }
 }
 		}
@@ -1053,9 +1053,9 @@ option = {
 name = "Outrageous!"
 prestige_factor = -0.1
 
-any_pop = { 
+any_pop = {
 
-limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } 
+limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } }
 
 ideology = {
 	factor = 0.25
@@ -1064,8 +1064,8 @@ ideology = {
 
 }
 
-ai_chance = { 
-factor = 1 
+ai_chance = {
+factor = 1
 modifier = { factor = 0 war_policy = jingoism }
 }
 		}
@@ -1080,8 +1080,8 @@ war = {
 	call_ally = yes
 }
 
-ai_chance = { 
-factor = 1 
+ai_chance = {
+factor = 1
 modifier = { factor = 0 NOT = { war_policy = jingoism } }
 }
 		}
@@ -1107,7 +1107,7 @@ owns = 1587
 ai = no
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 3
 	}
 
@@ -1115,9 +1115,9 @@ option = {
 name = "Give in to the demand for self-autonomy in Tibet"
 release_vassal = TIB
 diplomatic_influence = { who = TIB value = 200 }
-TIB = { 
+TIB = {
 government = sar_government
-country_event = 800054 
+country_event = 800054
 ruling_party_ideology = communist
 }
 ai_chance = { factor = 0.1 }
@@ -1157,7 +1157,7 @@ COI = { exists = no }
 owns = 2545
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 8
 	}
 
@@ -1199,7 +1199,7 @@ NIU = { exists = no }
 owns = 2548
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 10
 	}
 
@@ -1251,7 +1251,7 @@ relation = { who = ENG value = 50 }
 1496 = { remove_core = XEU }
 1496 = { remove_core = ENG }
 1496 = { add_core = CHI }
-ENG = { 
+ENG = {
 remove_accepted_culture = chinese_cantonese
 inherit = HKG
 release_vassal = HKG
@@ -1290,7 +1290,7 @@ is_vassal = no
 SPA = { owns = 1695 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 10
 	}
 
@@ -1298,7 +1298,7 @@ option = {
 name = "Fight the Spanish"
 prestige = 50
 
-set_global_flag = spanish_decolonisation_mor 
+set_global_flag = spanish_decolonisation_mor
 
 war = {
 	target = SPA
@@ -1340,7 +1340,7 @@ NOT = { war_with = MOR }
 has_global_flag = spanish_decolonisation_mor
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -1350,12 +1350,12 @@ prestige = 50
 badboy = -5
 relation = { who = MOR value = 100 }
 
-#1687 = { secede_province = MOR } 
-#1688 = { secede_province = MOR } 
+#1687 = { secede_province = MOR }
+#1688 = { secede_province = MOR }
 
 1695 = { secede_province = MOR }
- 
-1696 = { secede_province = MOR } 
+
+1696 = { secede_province = MOR }
 
 relation = { who = FRA value = 50 }
 ai_chance = { factor = 0.95 }
@@ -1429,7 +1429,7 @@ NOT = { has_country_modifier = peace_making_veoted }
 has_country_modifier = requested_un_peacemaking
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 2
 
 modifier = { factor = 0.5 has_global_flag = UNSG_aggressive }
@@ -1447,12 +1447,12 @@ add_country_modifier = { name = un_peace_making_aid duration = 1825 }
 
 clr_country_flag = un_peace_making_marker
 
-any_country = { 
+any_country = {
 limit = { has_country_modifier = unsc_permanent_member }
-country_event = 1512032 
+country_event = 1512032
 }
 
-any_neighbor_country = { 
+any_neighbor_country = {
 limit = { has_country_modifier = united_nations_ga_member }
 country_event = 1512032
 }
@@ -1474,7 +1474,7 @@ has_country_modifier = peace_making_veoted
 has_country_modifier = requested_un_peacemaking
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 
 modifier = { factor = 0.5 has_global_flag = UNSG_aggressive }
@@ -1512,7 +1512,7 @@ has_country_modifier = peace_making_veoted
 has_country_modifier = requested_un_peacemaking
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 
 modifier = { factor = 0.5 has_global_flag = UNSG_aggressive }
@@ -1531,7 +1531,7 @@ create_alliance = FROM
 military_access = FROM
 FROM = { military_access = THIS }
 
-ai_chance = { 
+ai_chance = {
 factor = 1
 modifier = { factor = 0 NOT = { relation = { who = FROM value = 0 } } }
 modifier = { factor = 0 war_policy = pacifism }
@@ -1546,7 +1546,7 @@ clr_country_flag = un_peace_making_marker
 
 prestige = -25
 relation = { who = FROM value = -25 }
-ai_chance = { 
+ai_chance = {
 factor = 1
 modifier = { factor = 0 relation = { who = FROM value = 0 } }
 modifier = { factor = 0 NOT = { war_policy = pacifism } }
@@ -1576,7 +1576,7 @@ age_of_protests = 1
 OR = { has_country_modifier = recession has_country_modifier = great_recession }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -1634,7 +1634,7 @@ year = 1982
 NOT = { year = 1991 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 2
 	}
 
@@ -1683,7 +1683,7 @@ year = 1989
 NOT = { year = 1991 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 9
 	}
 
@@ -1738,7 +1738,7 @@ NOT = { neoliberalism = 1 }
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 36
 
 modifier = { factor = 4 part_of_sphere = yes }
@@ -1759,53 +1759,53 @@ option = {
 name = "Allow it to proceed unopposed!"
 
 #Socialist Group
-random_owned = { 
-limit = { 
-owner = { 
+random_owned = {
+limit = {
+owner = {
 OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social }
-} 
-	} 
+}
+	}
 owner = { random_list = {
 	40 = { country_event = 141208 }
 	10 = { country_event = 141509 }
-	50 = { country_event = 141512 } 
+	50 = { country_event = 141512 }
 		} }
 }
 
 #Populist Group
-random_owned = { 
-limit = { 
-owner = { 
+random_owned = {
+limit = {
+owner = {
 OR = { pop_majority_ideology = populist pop_majority_ideology = nationalist }
-} 
-	} 
+}
+	}
 owner = { random_list = {
 	70 = { country_event = 141208 }
 	20 = { country_event = 141510 }
-	10 = { country_event = 141509 } 
+	10 = { country_event = 141509 }
 		} }
 }
 
 #Conservative Group
-random_owned = { 
-limit = { 
-owner = { 
+random_owned = {
+limit = {
+owner = {
 OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent }
-} 
-	} 
+}
+	}
 owner = { random_list = {
 	80 = { country_event = 141208 }
 	20 = { country_event = 141510 }
 		} }
-} 
+}
 
 #Traditionalist Group
-random_owned = { 
-limit = { 
-owner = { 
+random_owned = {
+limit = {
+owner = {
 OR = { pop_majority_ideology = traditionalist }
-} 
-	} 
+}
+	}
 owner = { random_list = {
 	10 = { country_event = 141509 }
 	90 = { country_event = 141511 }
@@ -1813,16 +1813,16 @@ owner = { random_list = {
 }
 
 #Liberal Group
-random_owned = { 
-limit = { 
-owner = { 
+random_owned = {
+limit = {
+owner = {
 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive }
-} 
-	} 
+}
+	}
 
 owner = { country_event = 141513 }
 
-		
+
 }
 
 ai_chance = { factor = 0.9 }
@@ -1868,7 +1868,7 @@ any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes 
 
 any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } militancy = 10 }
 
-add_country_modifier = {  name = ethnic_cleansing duration = 3650 } 
+add_country_modifier = {  name = ethnic_cleansing duration = 3650 }
 
 ai_chance = { factor = 0.5 }
 		}
@@ -1892,7 +1892,7 @@ any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes 
 
 any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } militancy = 5 }
 
-add_country_modifier = {  name = ethnic_cleansing duration = 1825 } 
+add_country_modifier = {  name = ethnic_cleansing duration = 1825 }
 
 
 ai_chance = { factor = 0.3 }
@@ -1917,7 +1917,7 @@ any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes 
 
 any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } militancy = 2.5 }
 
-add_country_modifier = {  name = ethnic_cleansing duration = 913 } 
+add_country_modifier = {  name = ethnic_cleansing duration = 913 }
 
 ai_chance = { factor = 0.2 }
 		}
@@ -1937,7 +1937,7 @@ overlord = { NOT = { military_access = THIS } }
 revolt_percentage = 0.1
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -1963,7 +1963,7 @@ tag = BRU
 NOT = { OR = { government = hms_government government = hms_government1 government = absolute_monarchy } }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -1998,7 +1998,7 @@ war_with = DAI
 DAI = { exists = yes }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 2
 	}
 
@@ -2030,7 +2030,7 @@ SVI = { war_with = DAI }
 DAI = { exists = yes }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 9
 	}
 
@@ -2075,7 +2075,7 @@ war_with = DAI
 DAI = { exists = yes }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 2
 	}
 
@@ -2185,9 +2185,9 @@ any_owned_province = { NOT = { has_province_modifier = aerial_bombed } OR = { ha
 option = {
 name = "Citizens, you have survived the worst!"
 
-any_owned = { 
+any_owned = {
 
-limit = { NOT = { has_province_modifier = aerial_bombed } } 
+limit = { NOT = { has_province_modifier = aerial_bombed } }
 
 remove_province_modifier = air_raid_high
 remove_province_modifier = air_raid_medium
@@ -2216,7 +2216,7 @@ ruling_party_ideology = socialist
 NOT = { has_country_flag = south_viet_soc }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -2259,7 +2259,7 @@ KMT = { is_greater_power = no government = democracy OR = { ruling_party_ideolog
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -2312,7 +2312,7 @@ any_owned_province = { state_scope = { flashpoint_tension = 75 has_flashpoint = 
 option = {
 name = "Seek crisis resolution"
 
-any_country = { 
+any_country = {
 limit = { has_country_modifier = unsc_permanent_member }
 country_event = 1512050
 }
@@ -2365,7 +2365,7 @@ option = {
 name = "Let's find out the result"
 
 random_owned = {
-limit = { owner = { has_country_flag = unsc_veto_crisis } } 
+limit = { owner = { has_country_flag = unsc_veto_crisis } }
 
 owner = { country_event = 1512053 }
 
@@ -2446,7 +2446,7 @@ NOT = { war_with = FRA }
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 9
 	}
 
@@ -2545,7 +2545,7 @@ NOT = { year = 1990 }
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 5
 	}
 
@@ -2576,7 +2576,7 @@ trigger = {
 
 has_country_flag = collectivise_farms
 
-any_owned_province = { 
+any_owned_province = {
 OR = {
 trade_goods = fruit
 trade_goods = grain
@@ -2587,7 +2587,7 @@ trade_goods = tea
 trade_goods = tobacco
 trade_goods = coffee
 trade_goods = cotton
-} 
+}
 
 NOT = { has_province_modifier = collectivisation }
 
@@ -2599,9 +2599,9 @@ NOT = { has_province_modifier = collectivisation }
 option = {
 name = "This will increase crop yield!"
 
-any_owned = { 
+any_owned = {
 
-limit = { 
+limit = {
 OR = {
 trade_goods = fruit
 trade_goods = grain
@@ -2612,9 +2612,9 @@ trade_goods = tea
 trade_goods = tobacco
 trade_goods = coffee
 trade_goods = cotton
-} 
+}
 NOT = { has_province_modifier = collectivisation }
-	} 
+	}
 
 add_province_modifier = { name = collectivisation duration = -1 }
 
@@ -2650,7 +2650,7 @@ NOT = { social_service_reform = the_safety_grid } }
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 120
 
 modifier = { factor = 1.75 pop_majority_ideology = traditionalist }
@@ -2672,104 +2672,104 @@ name = "Give in to the Trade Unions"
 
 #Wage and Work
 
-random_owned = { 
-limit = { owner = { wage_and_work_hours = paid_sick_leave_hours } } 
+random_owned = {
+limit = { owner = { wage_and_work_hours = paid_sick_leave_hours } }
 owner = { social_reform = six_hours } }
 
-random_owned = { 
-limit = { owner = { wage_and_work_hours = paid_vacation_hours } } 
+random_owned = {
+limit = { owner = { wage_and_work_hours = paid_vacation_hours } }
 owner = { social_reform = paid_sick_leave_hours } }
 
-random_owned = { 
-limit = { owner = { wage_and_work_hours = eight_work_hours } } 
+random_owned = {
+limit = { owner = { wage_and_work_hours = eight_work_hours } }
 owner = { social_reform = paid_vacation_hours } }
 
-random_owned = { 
-limit = { owner = { wage_and_work_hours = unregulated_hours } } 
+random_owned = {
+limit = { owner = { wage_and_work_hours = unregulated_hours } }
 owner = { social_reform = eight_work_hours } }
 
 #Safety Regulations
 
-random_owned = { 
-limit = { owner = { safety_regulations = strict_regulations } } 
+random_owned = {
+limit = { owner = { safety_regulations = strict_regulations } }
 owner = { social_reform = rigid_regulations } }
 
-random_owned = { 
-limit = { owner = { safety_regulations = restrictive_regulations } } 
+random_owned = {
+limit = { owner = { safety_regulations = restrictive_regulations } }
 owner = { social_reform = strict_regulations } }
 
-random_owned = { 
-limit = { owner = { safety_regulations = balanced_regulations } } 
+random_owned = {
+limit = { owner = { safety_regulations = balanced_regulations } }
 owner = { social_reform = restrictive_regulations } }
 
-random_owned = { 
-limit = { owner = { safety_regulations = some_regulations } } 
+random_owned = {
+limit = { owner = { safety_regulations = some_regulations } }
 owner = { social_reform = balanced_regulations } }
 
 #Unemployment Subsidies
 
-random_owned = { 
-limit = { owner = { unemployment_subsidies = generous_subsidies } } 
+random_owned = {
+limit = { owner = { unemployment_subsidies = generous_subsidies } }
 owner = { social_reform = citizen_salary } }
 
-random_owned = { 
-limit = { owner = { unemployment_subsidies = ghent_system } } 
+random_owned = {
+limit = { owner = { unemployment_subsidies = ghent_system } }
 owner = { social_reform = generous_subsidies } }
 
-random_owned = { 
-limit = { owner = { unemployment_subsidies = minimal_subsidies } } 
+random_owned = {
+limit = { owner = { unemployment_subsidies = minimal_subsidies } }
 owner = { social_reform = ghent_system } }
 
-random_owned = { 
-limit = { owner = { unemployment_subsidies = no_subsidies } } 
+random_owned = {
+limit = { owner = { unemployment_subsidies = no_subsidies } }
 owner = { social_reform = minimal_subsidies } }
 
 #Pensions
 
-random_owned = { 
-limit = { owner = { pensions = acceptable_pensions } } 
+random_owned = {
+limit = { owner = { pensions = acceptable_pensions } }
 owner = { social_reform = good_pensions } }
 
-random_owned = { 
-limit = { owner = { pensions = low_pensions } } 
+random_owned = {
+limit = { owner = { pensions = low_pensions } }
 owner = { social_reform = acceptable_pensions } }
 
-random_owned = { 
-limit = { owner = { pensions = trinket_pensions } } 
+random_owned = {
+limit = { owner = { pensions = trinket_pensions } }
 owner = { social_reform = low_pensions } }
 
-random_owned = { 
-limit = { owner = { pensions = no_pensions } } 
+random_owned = {
+limit = { owner = { pensions = no_pensions } }
 owner = { social_reform = trinket_pensions } }
 
 #Social Service
 
-random_owned = { 
-limit = { owner = { social_service_reform = anti_terror_surveillance } } 
+random_owned = {
+limit = { owner = { social_service_reform = anti_terror_surveillance } }
 owner = { social_reform = the_safety_grid } }
 
-random_owned = { 
-limit = { owner = { social_service_reform = social_abuse_protection } } 
+random_owned = {
+limit = { owner = { social_service_reform = social_abuse_protection } }
 owner = { social_reform = anti_terror_surveillance } }
 
-random_owned = { 
-limit = { owner = { social_service_reform = social_services } } 
+random_owned = {
+limit = { owner = { social_service_reform = social_services } }
 owner = { social_reform = social_abuse_protection } }
 
-random_owned = { 
-limit = { owner = { social_service_reform = no_social_service  } } 
+random_owned = {
+limit = { owner = { social_service_reform = no_social_service  } }
 owner = { social_reform = social_services } }
 
-ai_chance = { 
-factor = 1 
+ai_chance = {
+factor = 1
 
-modifier = { 
+modifier = {
 
-factor = 0 
+factor = 0
 
-NOT = { OR = { ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } } 
+NOT = { OR = { ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } }
 
-} 
+}
 
 }
 
@@ -2785,16 +2785,16 @@ any_owned = { add_province_modifier = { name = trade_union_action duration = 365
 
 any_pop = { militancy = 2 }
 
-ai_chance = { 
-factor = 1 
+ai_chance = {
+factor = 1
 
-modifier = { 
+modifier = {
 
-factor = 0 
+factor = 0
 
 OR = { ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social }
 
-} 
+}
 
 	}
 
@@ -2945,15 +2945,15 @@ title = "Terror Groups' Foreign Support Ends"
 
 trigger = {
 
-OR = { has_country_modifier = terror_groups_in has_country_flag = terror_groups_in } 
+OR = { has_country_modifier = terror_groups_in has_country_flag = terror_groups_in }
 
-OR = { 
+OR = {
 is_greater_power = yes
-is_secondary_power = yes 
-has_country_modifier = spy_low 
-has_country_modifier = spy_high_gp 
+is_secondary_power = yes
+has_country_modifier = spy_low
+has_country_modifier = spy_high_gp
 
-NOT = { any_neighbor_country = { has_country_modifier = promoting_terrorists } } 
+NOT = { any_neighbor_country = { has_country_modifier = promoting_terrorists } }
 }
 
 }
@@ -2983,7 +2983,7 @@ NOT = { OR = { government = proletarian_dictatorship government = proletarian_di
 NOT = { has_country_flag = meto_flag }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 2
 	}
 
@@ -3056,7 +3056,7 @@ MAD = { exists = no }
 any_owned_province = { is_core = MAD }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 3
 	}
 
@@ -3095,7 +3095,7 @@ is_greater_power = yes
 GER = { exists = yes }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 5
 	}
 
@@ -3161,7 +3161,7 @@ war = no
 NOT = { has_global_flag = blocsenabled }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 9
 	}
 
@@ -3213,7 +3213,7 @@ election = no
 is_vassal = no
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 7
 	}
 
@@ -3251,7 +3251,7 @@ is_vassal = no
 year = 1997
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 3
 	}
 
@@ -3291,7 +3291,7 @@ is_vassal = no
 war = no
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 60
 	}
 
@@ -3357,7 +3357,7 @@ is_vassal = no
 war = no
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 60
 	}
 
@@ -3423,7 +3423,7 @@ is_vassal = no
 war = no
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 60
 	}
 
@@ -3491,7 +3491,7 @@ name = "We are no longer enjoying the splendid isolation"
 prestige = -50
 remove_country_modifier = declared_neutrality
 clr_country_flag = renounced_war_rights
-clr_country_flag = neutrality		
+clr_country_flag = neutrality
 	}
 
 }
@@ -3510,7 +3510,7 @@ tag = SAF
 NOT = { OR = { primary_culture = afrikaaner primary_culture = white_anglo } }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 6
 	}
 
@@ -3541,14 +3541,14 @@ title = "Economy Strained by Total War"
 
 trigger = {
 war = yes
-OR = { is_mobilised = yes national_provinces_occupied = 0.10 } 
+OR = { is_mobilised = yes national_provinces_occupied = 0.10 }
 NOT = { has_country_modifier = costs_of_war_1 }
 NOT = { has_country_modifier = costs_of_war_2 }
 NOT = { has_country_modifier = costs_of_war_3 }
 NOT = { has_country_modifier = costs_of_war_4 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 18
 	}
 
@@ -3574,7 +3574,7 @@ NOT = { has_country_modifier = costs_of_war_3 }
 NOT = { has_country_modifier = costs_of_war_4 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 18
 	}
 
@@ -3600,7 +3600,7 @@ NOT = { has_country_modifier = costs_of_war_3 }
 NOT = { has_country_modifier = costs_of_war_4 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 18
 	}
 
@@ -3625,7 +3625,7 @@ has_country_modifier = costs_of_war_3
 NOT = { has_country_modifier = costs_of_war_4 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 18
 	}
 
@@ -3647,11 +3647,11 @@ trigger = {
 war = no
 is_mobilised = no
 
-OR = { 
-has_country_modifier = costs_of_war_1 
-has_country_modifier = costs_of_war_2 
-has_country_modifier = costs_of_war_3 
-has_country_modifier = costs_of_war_4 
+OR = {
+has_country_modifier = costs_of_war_1
+has_country_modifier = costs_of_war_2
+has_country_modifier = costs_of_war_3
+has_country_modifier = costs_of_war_4
 }
 
 }
@@ -3688,7 +3688,7 @@ BLZ = { exists = no }
 GUA = { exists = yes }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -3701,16 +3701,16 @@ release_vassal = BLZ
 
 diplomatic_influence = { who = BLZ value = 200 }
 
-BLZ = { 
-government = colonial_government 
-country_event = 800054 
-ruling_party_ideology = conservative 
+BLZ = {
+government = colonial_government
+country_event = 800054
+ruling_party_ideology = conservative
 
-any_pop = { 
+any_pop = {
 ideology = {
 	factor = 0.9
 	value = conservative
-	} 
+	}
 }
 
 }
@@ -3759,7 +3759,7 @@ owns = 2219
 BAH = { exists = no }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 7
 	}
 
@@ -3772,16 +3772,16 @@ release = BAH
 
 diplomatic_influence = { who = BAH value = 200 }
 
-BAH = { 
-government = hms_government1 
-country_event = 800054 
-ruling_party_ideology = conservative 
+BAH = {
+government = hms_government1
+country_event = 800054
+ruling_party_ideology = conservative
 
-any_pop = { 
+any_pop = {
 ideology = {
 	factor = 0.9
 	value = conservative
-	} 
+	}
 }
 
 }
@@ -3820,12 +3820,12 @@ option = {
 name = "Workers of the world unite!"
 ruling_party_ideology = socialist
 
-any_owned = { 
-limit = { 
-NOT = { 
-OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social } 
-	} 
-} 
+any_owned = {
+limit = {
+NOT = {
+OR = { pop_majority_ideology = socialist pop_majority_ideology = communist pop_majority_ideology = communist_social }
+	}
+}
 
 militancy = 5
 
@@ -3862,7 +3862,7 @@ is_vassal = yes
 GUA = { exists = yes }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 6
 	}
 
@@ -3913,7 +3913,7 @@ election = no
 war = no
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 3
 	}
 
@@ -3951,7 +3951,7 @@ is_vassal = no
 war = no
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 10
 	}
 
@@ -3991,7 +3991,7 @@ owns = 2454
 war = no
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 10
 	}
 
@@ -4037,7 +4037,7 @@ war = no
 AST = { exists = yes }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 10
 	}
 
@@ -4088,7 +4088,7 @@ war = no
 AST = { exists = yes }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 11
 	}
 
@@ -4134,7 +4134,7 @@ has_country_modifier = newly_independent_country
 NOT = { has_country_flag = post_colonial_politics }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -4147,7 +4147,7 @@ set_country_flag = post_colonial_politics
 
 add_country_modifier = { name = post_colonial_chaos duration = 1825 }
 
-any_pop = { 
+any_pop = {
 
 limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } }
 
@@ -4179,7 +4179,7 @@ CHI = { exists = yes war = no }
 has_global_flag = puyi_china
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 8
 	}
 
@@ -4222,7 +4222,7 @@ year = 1946
 NOT = { year = 1990 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 4
 	}
 
@@ -4286,7 +4286,7 @@ GRN = { exists = no }
 NOT = { year = 1990 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 12
 	}
 
@@ -4337,7 +4337,7 @@ ai_chance = { factor = 0.1 }
 
 }
 
-#Operation Blue Star 
+#Operation Blue Star
 country_event = {
 	id = 1512100
 title = "Operation Blue Star"
@@ -4354,7 +4354,7 @@ PNJ = { exists = no }
 NOT = { year = 1990 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 6
 	}
 
@@ -4375,7 +4375,7 @@ ai_chance = { factor = 0.1 }
 
 }
 
-#Francoist Stability 
+#Francoist Stability
 country_event = {
 	id = 1512101
 title = "Liberalisation of the Spanish Media"
@@ -4392,7 +4392,7 @@ NOT = { year = 1975 }
 war = no
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -4417,24 +4417,24 @@ is_triggered_only = yes
 option = {
 name = "Embrace the new reality"
 
-any_country = { 
-limit = { 
+any_country = {
+limit = {
 exists = no
-OR = { 
+OR = {
 		tag = LIT
 		tag = LAT
 		tag = EST
-		tag = UKR 
-		tag = BYE 
-		tag = GEO 
-		tag = AZB 
-		tag = ARM 
+		tag = UKR
+		tag = BYE
+		tag = GEO
+		tag = AZB
+		tag = ARM
 		tag = TKR
 		tag = MOL
-		tag = UZB 
-		tag = KYR 
-		tag = TAJ 
-		tag = KAZ 
+		tag = UZB
+		tag = KYR
+		tag = TAJ
+		tag = KAZ
 }
 	}
 
@@ -4483,7 +4483,7 @@ NOT = { has_country_flag = tiger_cub_eco }
 war = no
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 25
 	}
 
@@ -4506,7 +4506,7 @@ ai_chance = { factor = 0.1 }
 
 }
 
-#Union of Djibouti and Somalia 
+#Union of Djibouti and Somalia
 country_event = {
 	id = 1512105
 title = "Union of Djibouti and Somalia"
@@ -4524,7 +4524,7 @@ SOM = { is_vassal = no war = no }
 NOT = { year = 1990 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -4567,7 +4567,7 @@ has_country_flag = ido_united
 NOT = { year = 1990 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 4
 	}
 
@@ -4612,7 +4612,7 @@ year = 1959
 NOT = { year = 1990 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 5
 	}
 
@@ -4652,7 +4652,7 @@ year = 1962
 NOT = { year = 1990 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 5
 	}
 
@@ -4697,7 +4697,7 @@ war = no
 NOT = { year = 1990 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 4
 	}
 
@@ -4737,7 +4737,7 @@ war = no
 NOT = { year = 1990 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 4
 	}
 
@@ -4777,7 +4777,7 @@ is_vassal = no
 NOT = { year = 2000 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 8
 	}
 
@@ -4870,7 +4870,7 @@ year = 1999
 OR = { government = hms_government government = hms_government1 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 11
 	}
 
@@ -4888,10 +4888,10 @@ ai_chance = { factor = 0.1 }
 
 }
 
-#Siamese coup d'état of 1947
+#Siamese coup d'ï¿½tat of 1947
 country_event = {
 	id = 1512115
-title = "Siamese coup d'état of $YEAR$"
+title = "Siamese coup d'ï¿½tat of $YEAR$"
 	desc = EVTDESC1512115
 	picture = "thi_1947_coup"
 
@@ -4907,7 +4907,7 @@ NOT = { year = 1990 }
 OR = { government = hms_government government = hms_government1 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 11
 	}
 
@@ -4946,7 +4946,7 @@ NOT = { year = 1990 }
 government = absolute_monarchy
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 10
 	}
 
@@ -4967,10 +4967,10 @@ ai_chance = { factor = 0.1 }
 
 }
 
-#2014 Thai coup d'état
+#2014 Thai coup d'ï¿½tat
 country_event = {
 	id = 1512117
-title = "$YEAR$ Thai coup d'état"
+title = "$YEAR$ Thai coup d'ï¿½tat"
 	desc = EVTDESC1512117
 	picture = "thi_2014_coup"
 
@@ -4985,7 +4985,7 @@ year = 2014
 OR = { government = hms_government government = hms_government1 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 5
 	}
 
@@ -5020,11 +5020,11 @@ election = no
 is_vassal = no
 war = no
 year = 1979
-NOT = { year = 1990 } 
+NOT = { year = 1990 }
 OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 5
 	}
 
@@ -5060,11 +5060,11 @@ is_vassal = no
 war = no
 year = 1983
 NOT = { year = 1990 }
-government = democracy 
+government = democracy
 GRD = { government = proletarian_dictatorship war = no is_vassal = no }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 10
 	}
 
@@ -5110,7 +5110,7 @@ NOT = { year = 1990 }
 OR = { government = democracy government = democracy1 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -5153,7 +5153,7 @@ WPA = { exists = no }
 any_owned_province = { is_core = WPA }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -5217,7 +5217,7 @@ RUS = { exists = yes is_greater_power = yes war = no }
 NOT = { has_global_flag = blocsenabled }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 4
 	}
 
@@ -5304,11 +5304,11 @@ tag = ETH
 OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
 is_vassal = no
 war = no
-is_possible_vassal = ERI 
+is_possible_vassal = ERI
 has_country_flag = eth_war_trigger
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 24
 	}
 
@@ -5357,7 +5357,7 @@ ruling_party_ideology = communist
 has_global_flag = blocsenabled
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -5382,10 +5382,10 @@ ai_chance = { factor = 0.05 }
 
 }
 
-#Soviet–Albanian split
+#Sovietï¿½Albanian split
 country_event = {
 	id = 1512127
-title = "Soviet–Albanian Split"
+title = "Sovietï¿½Albanian Split"
 	desc = EVTDESC1512127
 	picture = "alb_rus_split"
 
@@ -5402,7 +5402,7 @@ CHI = { is_greater_power = yes government = proletarian_dictatorship }
 has_global_flag = blocsenabled
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 12
 	}
 
@@ -5443,7 +5443,7 @@ war = no
 is_vassal = no
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 2
 	}
 
@@ -5481,7 +5481,7 @@ war = no
 is_vassal = no
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 6
 	}
 
@@ -5528,7 +5528,7 @@ NOT = { has_global_flag = blocsenabled }
 average_militancy = 5
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -5565,7 +5565,7 @@ war = no
 is_possible_vassal = MIN
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 8
 	}
 
@@ -5608,7 +5608,7 @@ war = no
 CUR = { exists = yes vassal_of = NET government = colonial_government }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 10
 	}
 
@@ -5631,10 +5631,10 @@ option = {
 name = "Keep the union"
 prestige = -50
 badboy = 2
-CUR = { 
+CUR = {
 
-any_owned = { 
-limit = { NOT = { is_core = CUR } } 
+any_owned = {
+limit = { NOT = { is_core = CUR } }
 add_province_modifier = { name = nationalist_agitation duration = 3650 }
 }
 
@@ -5663,7 +5663,7 @@ war = no
 government = hms_government
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 3
 	}
 
@@ -5703,7 +5703,7 @@ FRA = { exists = yes government = democracy is_greater_power = yes tech_school =
 tech_school = XEU_tech_school
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -5829,7 +5829,7 @@ NOT = { AND = { tag = GRD ai = yes } }
 NOT = { has_country_flag = treaty_of_friendship_ussr_comm }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -5837,10 +5837,10 @@ option = {
 name = "Yes!"
 relation = { who = RUS value = 200 }
 create_alliance = RUS
-any_country = { 
-limit = { 
+any_country = {
+limit = {
 OR = { has_country_modifier = democratic_bloc_leader has_country_modifier = democratic_bloc }
-} 
+}
 leave_alliance = THIS
 }
 
@@ -5854,10 +5854,10 @@ relation = { who = RUS value = -100 }
 random_country = { limit = { NOT = { tag = RUS } is_greater_power = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } relation = { who = THIS value = 100 } diplomatic_influence = { who = THIS value = 100 } }
 set_country_flag = treaty_of_friendship_ussr_comm
 
-any_country = { 
-limit = { 
+any_country = {
+limit = {
 OR = { has_country_modifier = democratic_bloc_leader has_country_modifier = democratic_bloc }
-} 
+}
 leave_alliance = THIS
 }
 
@@ -5885,7 +5885,7 @@ government = hms_government
 is_possible_vassal = GUY
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 8
 	}
 
@@ -5920,7 +5920,7 @@ owns = 919
 year = 2004
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 8
 	}
 
@@ -5949,7 +5949,7 @@ JAP = { exists = yes is_greater_power = yes war = no OR = { government = hms_gov
 GER = { exists = yes is_greater_power = yes war = no OR = { government = hms_government government = hms_government1 government = democracy } }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 9
 	}
 
@@ -6043,7 +6043,7 @@ has_global_flag = 1990_gulf_war_fired_flag
 has_global_flag = 1990_gulf_war_kuw_annexed
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -6060,10 +6060,10 @@ ai_chance = { factor = 0.1 }
 
 }
 
-#July 1966 Burundian coup d'état
+#July 1966 Burundian coup d'ï¿½tat
 country_event = {
 	id = 1512145
-title = "$YEAR$ Burundian coup d'état"
+title = "$YEAR$ Burundian coup d'ï¿½tat"
 	desc = EVTDESC1512145
 	picture = "brun_coup_1966"
 
@@ -6078,7 +6078,7 @@ NOT = { year = 1990 }
 OR = { government = hms_government government = hms_government1 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 11
 	}
 
@@ -6130,13 +6130,13 @@ year = 1946
 NOT = { year = 1990 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 2
 	}
 
 option = {
 name = "Rejoice!"
-any_owned = { 
+any_owned = {
 limit = { is_core = FRA }
 add_province_modifier = { name = family_values1 duration = 7300 }
 		}
@@ -6159,13 +6159,13 @@ year = 1946
 NOT = { year = 1990 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 2
 	}
 
 option = {
 name = "Rejoice!"
-any_owned = { 
+any_owned = {
 limit = { is_core = ITA }
 add_province_modifier = { name = family_values1 duration = 5745 }
 		}
@@ -6190,7 +6190,7 @@ NOT = { year = 1990 }
 government = democracy
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 2
 	}
 
@@ -6233,7 +6233,7 @@ exists = JAP
 JAP = { is_vassal = no war = no OR = { government = hms_government government = democracy } }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 12
 	}
 
@@ -6345,10 +6345,10 @@ title = "End of the $COUNTRY_ADJ$ Tribute System"
 	picture = "vassal_tribute_system_end"
 
 trigger = {
-OR = {	
+OR = {
 has_country_modifier = vtshigh
 has_country_modifier = vtsmedium
-has_country_modifier = vtslow 
+has_country_modifier = vtslow
 	}
 
 NOT = { num_of_vassals = 1 }
@@ -6382,19 +6382,19 @@ year = 2015
 government = democracy
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
 option = {
 name = "We pray for the victims"
 
-any_pop = { 
+any_pop = {
 limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } }
 ideology = {
 	factor = 0.5
 	value = conservative
-} 
+}
 	}
 
 ai_chance = { factor = 0.6 }
@@ -6403,12 +6403,12 @@ ai_chance = { factor = 0.6 }
 option = {
 name = "Seek vengence!"
 
-any_pop = { 
+any_pop = {
 limit = { is_primary_culture = no is_accepted_culture = no }
 ideology = {
 	factor = 0.25
 	value = traditionalist
-} 
+}
 	}
 
 ai_chance = { factor = 0.4 }
@@ -6434,7 +6434,7 @@ OR = { safety_regulations = some_regulations safety_regulations = balanced_regul
 owns = 1669
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 3
 	}
 
@@ -6471,7 +6471,7 @@ government = proletarian_dictatorship
 ruling_party_ideology = communist_social
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 2
 	}
 
@@ -6480,12 +6480,12 @@ name = "Arrest Bo Xilai and his cadres"
 prestige_factor = -0.05
 badboy = 2
 
-any_pop = { 
+any_pop = {
 limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } }
 ideology = {
 	factor = 0.5
 	value = communist_social
-} 
+}
 	}
 
 ai_chance = { factor = 0.9 }
@@ -6521,51 +6521,51 @@ tag = RUS
 government = socialist_democracy
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
 option = {
 name = "Rejoice!"
 
-any_country = { 
-limit = { is_vassal = no neighbour = RUS exists = yes OR = { tag = EST tag = LIT tag = LAT } OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } } 
+any_country = {
+limit = { is_vassal = no neighbour = RUS exists = yes OR = { tag = EST tag = LIT tag = LAT } OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } }
 country_event = 1512158
 }
 
-any_owned = { 
+any_owned = {
 
-limit = { 
+limit = {
 
-OR = { 
-is_core = BYE 
-is_core = GEO 
-is_core = AZB 
-is_core = ARM 
+OR = {
+is_core = BYE
+is_core = GEO
+is_core = AZB
+is_core = ARM
 is_core = TKR
 is_core = MOL
-is_core = UZB 
-is_core = KYR 
-is_core = TAJ 
-is_core = KAZ 
+is_core = UZB
+is_core = KYR
+is_core = TAJ
+is_core = KAZ
 is_core = LIT
 is_core = LAT
 is_core = EST
 is_core = UKR
-} 
+}
 
-} 
+}
 
 add_core = RUS
 
 }
 
-any_pop = { 
+any_pop = {
 limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } }
 ideology = {
 	factor = 0.5
 	value = communist_social
-} 
+}
 	}
 
 		}
@@ -6621,7 +6621,7 @@ ITA = { owns = 736 }
 736 = { is_core = YUG }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 11
 	}
 
@@ -6661,7 +6661,7 @@ name = "Defeatism grows amongst our people!"
 prestige = -100
 war_exhaustion = 25
 set_country_flag = capital_lost
-any_pop = { 
+any_pop = {
 dominant_issue = {
 	value = pacifism
 	factor = 0.5
@@ -6685,7 +6685,7 @@ has_country_flag = capital_lost
 
 option = {
 name = "The $COUNTRY_ADJ$ people heave a sigh of relief"
-any_pop = { 
+any_pop = {
 dominant_issue = {
 	value = pacifism
 	factor = 0.25
@@ -6714,7 +6714,7 @@ year = 1966
 NOT = { year = 1990 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 2
 	}
 
@@ -6750,7 +6750,7 @@ year = 1967
 NOT = { year = 1990 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 12
 	}
 
@@ -6796,7 +6796,7 @@ NOT = { has_country_modifier = economic_boom }
 NOT = { year = 1990 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 5
 	}
 
@@ -6830,7 +6830,7 @@ year = 1989
 NOT = { year = 1992 }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 1
 	}
 
@@ -6860,7 +6860,7 @@ exists = RUS
 NOT = { war_with = RUS }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 4
 	}
 
@@ -6898,7 +6898,7 @@ has_global_flag = blocsenabled
 war = no
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 4
 	}
 
@@ -6988,7 +6988,7 @@ has_global_flag = blocsenabled
 war = no
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 9
 	}
 
@@ -7077,7 +7077,7 @@ exists = UKR
 exists = NRO
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 7
 	}
 
@@ -7085,9 +7085,9 @@ option = {
 name = "Lodge a complaint to the UN"
 relation = { who = RUS value = -100 }
 
-any_country = { 
-limit = { has_country_modifier = unsc_permanent_member 
-NOT = { tag = RUS } } 
+any_country = {
+limit = { has_country_modifier = unsc_permanent_member
+NOT = { tag = RUS } }
 country_event = 1512174
 }
 
@@ -7164,7 +7164,7 @@ fire_only_once = yes
 
 trigger = {
 tag = CYP
-government = democracy 
+government = democracy
 year = 2004
 is_vassal = no
 NOT = { has_global_flag = blocsenabled }
@@ -7173,7 +7173,7 @@ TUR = { war = no exists = yes }
 NCY = { vassal_of = TUR }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 4
 	}
 
@@ -7227,7 +7227,7 @@ fire_only_once = yes
 
 trigger = {
 tag = TUR
-NCY = { 
+NCY = {
 OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship }
 }
 year = 1983
@@ -7238,7 +7238,7 @@ is_our_vassal = NCY
 exists = CYP
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 11
 	}
 
@@ -7275,7 +7275,7 @@ year = 1961
 ai = no
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 6
 	}
 
@@ -7303,7 +7303,7 @@ is_vassal = no
 government = absolute_monarchy
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 10
 	}
 
@@ -7342,16 +7342,16 @@ NOT = { has_country_modifier = communist_bloc }
 NOT = { has_country_flag = bandung_conference }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 4
 	}
 
 option = {
 name = "Attend the conference"
 prestige = 10
-any_country = { 
+any_country = {
 
-limit = { is_vassal = no NOT = { has_country_modifier = democratic_bloc } NOT = { has_country_modifier = communist_bloc } } 
+limit = { is_vassal = no NOT = { has_country_modifier = democratic_bloc } NOT = { has_country_modifier = communist_bloc } }
 
 relation = { who = THIS value = 50 }
 
@@ -7365,11 +7365,11 @@ name = "Stay out of it"
 
 set_country_flag = bandung_conference
 
-any_country = { 
+any_country = {
 
-limit = { 
-is_vassal = no 
-OR = { has_country_modifier = democratic_bloc has_country_modifier = communist_bloc } 
+limit = {
+is_vassal = no
+OR = { has_country_modifier = democratic_bloc has_country_modifier = communist_bloc }
 }
 
 relation = { who = THIS value = 50 }
@@ -7397,7 +7397,7 @@ war = no
 has_global_flag = blocsenabled
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 2
 	}
 
@@ -7502,7 +7502,7 @@ digitaleconomics_theory = 1
 any_owned_province = { is_state_capital = yes trade_goods = credit total_pops = 1500000 NOT = { has_province_modifier = financial_centre } }
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 60
 	}
 
@@ -7563,7 +7563,7 @@ has_global_flag = blocsenabled
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 6
 	}
 
@@ -7606,7 +7606,7 @@ NOT = { year = 1990 }
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 10
 	}
 
@@ -7663,7 +7663,7 @@ NOT = { year = 1992 }
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 7
 	}
 
@@ -7715,7 +7715,7 @@ has_country_flag = alberto_fujimori
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 4
 	}
 
@@ -7768,7 +7768,7 @@ has_country_flag = alberto_fujimori
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 12
 	}
 
@@ -7819,7 +7819,7 @@ government = presidential_dictatorship
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 11
 	}
 
@@ -7867,7 +7867,7 @@ ruling_party_ideology = socialist
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 3
 	}
 
@@ -7920,7 +7920,7 @@ NOT = { has_country_flag = left_erm }
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 3
 	}
 
@@ -7968,7 +7968,7 @@ NOT = { year = 1999 }
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 9
 	}
 
@@ -8015,7 +8015,7 @@ NOT = { year = 1990 }
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 10
 	}
 
@@ -8152,7 +8152,7 @@ NOT = { year = 1990 }
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 10
 	}
 
@@ -8252,7 +8252,7 @@ year = 2011
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 7
 	}
 
@@ -8306,7 +8306,7 @@ NOT = { year = 1990 }
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 9
 	}
 
@@ -8356,7 +8356,7 @@ NOT = { year = 1990 }
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 10
 	}
 
@@ -8409,52 +8409,52 @@ option = {
 name = "The people blame our government for the defeat!"
 clr_country_flag = country_at_war
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = conservative } }
 owner = { any_pop = { ideology = { factor = -0.25 value = conservative } } }
 }
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = big_tent } }
 owner = { any_pop = { ideology = { factor = -0.25 value = big_tent } } }
 }
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = socialist } }
 owner = { any_pop = { ideology = { factor = -0.25 value = socialist } } }
 }
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = traditionalist } }
 owner = { any_pop = { ideology = { factor = -0.25 value = traditionalist } } }
 }
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = populist } }
 owner = { any_pop = { ideology = { factor = -0.25 value = populist } } }
 }
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = nationalist } }
 owner = { any_pop = { ideology = { factor = -0.25 value = nationalist } } }
 }
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = progressive } }
 owner = { any_pop = { ideology = { factor = -0.25 value = progressive } } }
 }
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = liberal } }
 owner = { any_pop = { ideology = { factor = -0.25 value = liberal } } }
 }
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = communist } }
 owner = { any_pop = { ideology = { factor = -0.25 value = communist } } }
 }
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = communist_social } }
 owner = { any_pop = { ideology = { factor = -0.25 value = communist_social } } }
 }
@@ -8514,52 +8514,52 @@ option = {
 name = "The people praise our government for the victory!"
 clr_country_flag = country_at_war
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = conservative } }
 owner = { any_pop = { ideology = { factor = 0.25 value = conservative } } }
 }
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = big_tent } }
 owner = { any_pop = { ideology = { factor = 0.25 value = big_tent } } }
 }
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = socialist } }
 owner = { any_pop = { ideology = { factor = 0.25 value = socialist } } }
 }
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = traditionalist } }
 owner = { any_pop = { ideology = { factor = 0.25 value = traditionalist } } }
 }
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = populist } }
 owner = { any_pop = { ideology = { factor = 0.25 value = populist } } }
 }
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = nationalist } }
 owner = { any_pop = { ideology = { factor = 0.25 value = nationalist } } }
 }
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = progressive } }
 owner = { any_pop = { ideology = { factor = 0.25 value = progressive } } }
 }
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = liberal } }
 owner = { any_pop = { ideology = { factor = 0.25 value = liberal } } }
 }
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = communist } }
 owner = { any_pop = { ideology = { factor = 0.25 value = communist } } }
 }
 
-random_owned = { 
+random_owned = {
 limit = { owner = { ruling_party_ideology = communist_social } }
 owner = { any_pop = { ideology = { factor = 0.25 value = communist_social } } }
 }
@@ -8579,7 +8579,7 @@ trigger = {
 
 has_country_flag = has_nuke_clouds
 
-NOT = { any_owned_province = { 
+NOT = { any_owned_province = {
 OR = { has_province_modifier = nuke_high has_province_modifier = nuke_medium has_province_modifier = nuke_low }
 } }
 
@@ -8607,7 +8607,7 @@ trigger = {
 
 has_country_flag = has_chemical_clouds
 
-NOT = { any_owned_province = { 
+NOT = { any_owned_province = {
 OR = { has_province_modifier = chemical_high has_province_modifier = chemical_medium has_province_modifier = chemical_low }
 } }
 
@@ -8653,7 +8653,7 @@ NOT = { year = 1990 }
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 10
 	}
 
@@ -8688,8 +8688,8 @@ name = "Withdraw from $FROMCOUNTRY$"
 prestige = -50
 relation = { who = FROM value = 50 }
 FROM = { set_country_flag = former_colonial_nation }
-ai_chance = { 
-factor = 1 
+ai_chance = {
+factor = 1
 modifier = { factor = 0 NOT = { war_policy = pacifism } }
 modifier = { factor = 0 NOT = { badboy = 0.7 } }
 }
@@ -8706,10 +8706,10 @@ war = {
 	call_ally = no
 }
 
-ai_chance = { 
-factor = 1 
+ai_chance = {
+factor = 1
 modifier = { factor = 0 war_policy = pacifism }
-modifier = { factor = 0 badboy = 0.7 } 
+modifier = { factor = 0 badboy = 0.7 }
 }
 		}
 
@@ -8744,7 +8744,7 @@ NOT = { year = 1990 }
 
 }
 
-mean_time_to_happen = { 
+mean_time_to_happen = {
 months = 5
 	}
 
@@ -8756,11 +8756,59 @@ ai_chance = { factor = 1 }
 		}
 
 option = {
-name = "Let the Leftist win!"
+name = "Let the Leftists win!"
 prestige = -50
 1496 = { secede_province = CHI }
 relation = { who = CHI value = 100 }
 ai_chance = { factor = 0 }
+		}
+
+}
+
+#12-3 incident Macau
+country_event = {
+	id = 1512214
+title = "12-3 Incident in Macau"
+	desc = EVTDESC1512214
+	picture = "mca_riots"
+
+fire_only_once = yes
+
+trigger = {
+
+tag = POR
+
+is_vassal = no
+
+owns = 1498
+
+CHI = { exists = yes government = proletarian_dictatorship }
+
+year = 1966
+
+NOT = { year = 1990 }
+
+}
+
+mean_time_to_happen = {
+months = 11
+	}
+
+option = {
+name = "Crush the uprising!"
+badboy = 5
+1498 = { add_province_modifier = { name = instigating_rebels duration = 3650 } }
+relation = { who = CHI value = -200 }
+1498 = { add_core = CHI }
+ai_chance = { factor = 0.2 }
+		}
+
+option = {
+name = "Give up sovereignty over Macau!"
+prestige = 25
+relation = { who = CHI value = 100 }
+1498 = { add_core = CHI remove_core = POR }
+ai_chance = { factor = 0.8 }
 		}
 
 }
