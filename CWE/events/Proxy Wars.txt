@@ -1,5 +1,3 @@
-
-
 #Set up Rebel Tag
 country_event = {
 	id = 1400072
@@ -137,7 +135,7 @@ limit = { owner = { FROM = { government = socialist_democracy } } }
 owner = { government = socialist_democracy country_event = 800054 ruling_party_ideology = communist_social }
 }
 
-FROM = { any_owned = { limit = { is_core = THIS } secede_province = THIS }
+FROM = { any_owned = { limit = { is_core = THIS } secede_province = THIS } }
 
 
 		}

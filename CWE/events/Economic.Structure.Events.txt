@@ -1,0 +1,1460 @@
+#Co-operatisation Levels
+
+country_event = {
+	id = '8100100'
+	title = "Co-operatisation Begins"
+	desc = "Worker co-operatives begin to spring up."
+	picture = "co_op"
+
+	trigger = { 
+		OR = {
+			has_country_flag = grow_co_ops
+			has_province_modifier = expanding_co_ops
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 120
+	}
+
+	option = {
+		name = "Interesting"
+		add_country_modifier = { name = co_op_1 duration = -1 }
+	}
+}
+
+country_event = {
+	id = '8100110'
+	title = "Co-operatisation Expands"
+	desc = "Worker co-operatives begin to influence the economy."
+	picture = "co_op"
+
+	trigger = { 
+		NOT = { has_country_modifier = { name = co_op_2 } }
+		NOT = { has_country_modifier = { name = co_op_3 } }
+		NOT = { has_country_modifier = { name = co_op_4 } }
+		NOT = { has_country_modifier = { name = co_op_5 } }
+		has_country_modifier = { name = co_op_1 }
+		has_country_flag = fund_co_ops
+		has_province_modifier = established_co_ops
+	}
+
+	mean_time_to_happen = { 
+		months = 120
+	}
+
+	option = {
+		name = "We shall see."
+		add_country_modifier = { name = co_op_2 duration = -1 }
+		remove_country_modifier = { name = co_op_1 }
+	}
+}
+
+country_event = {
+	id = '8100120'
+	title = "Co-operatisation Gain Power"
+	desc = "Worker co-operatives become a growing power base in society."
+	picture = "co_op"
+
+	trigger = { 
+		NOT = { has_country_modifier = { name = co_op_1 } }
+		NOT = { has_country_modifier = { name = co_op_3 } }
+		NOT = { has_country_modifier = { name = co_op_4 } }
+		NOT = { has_country_modifier = { name = co_op_5 } }
+		has_country_modifier = { name = co_op_2 }
+		has_country_flag = partner_co_ops
+		has_province_modifier = full_co_ops
+		
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = {
+		name = "This is big!"
+		add_country_modifier = { name = co_op_3 duration = -1 }
+		remove_country_modifier = { name = co_op_2 }
+	}
+}
+
+country_event = {
+	id = '8100130'
+	title = "Co-operatisation Dominates"
+	desc = "Worker co-operatives dominate society."
+	picture = "co_op"
+
+	trigger = { 
+		NOT = { has_country_modifier = { name = co_op_2 } }
+		NOT = { has_country_modifier = { name = co_op_1 } }
+		NOT = { has_country_modifier = { name = co_op_4 } }
+		NOT = { has_country_modifier = { name = co_op_5 } }
+		has_country_modifier = { name = co_op_3 }
+		has_country_flag = instatutionalise_co_ops
+		has_province_modifier = full_co_ops
+	}
+
+	mean_time_to_happen = { 
+		months = 12
+	}
+
+	option = {
+		name = "Capital is in retreat"
+		add_country_modifier = { name = co_op_4 duration = -1 }
+		remove_country_modifier = { name = co_op_3 }
+	}
+}
+
+country_event = {
+	id = '8100140'
+	title = "Co-operatisation Wins"
+	desc = "Worker co-operatives replace private production."
+	picture = "green_energy"
+
+	trigger = { 
+		NOT = { has_country_modifier = { name = co_op_2 } }
+		NOT = { has_country_modifier = { name = co_op_1 } }
+		NOT = { has_country_modifier = { name = co_op_5 } }
+		NOT = { has_country_modifier = { name = co_op_3 } }
+		has_country_modifier = { name = co_op_4 }
+		has_country_flag = total_co_ops
+		has_province_modifier = only_co_ops
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = {
+		name = "Fully Automated Worker Democracy"
+		add_country_modifier = { name = co_op_5 duration = -1 }
+		remove_country_modifier = { name = co_op_4 }
+	}
+}
+
+#Stakeholder Levels
+country_event = {
+	id = '8100200'
+	title = "Stakeholder Economy Begins"
+	desc = "Everyone has some stake in the economy."
+	picture = "stake_holder"
+
+	trigger = { 
+		NOT = { has_country_modifier = { name = stakeholder_1 } }
+		NOT = { has_country_modifier = { name = stakeholder_2 } }
+		NOT = { has_country_modifier = { name = stakeholder_3 } }
+		has_country_flag = stakeholder_economy
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = {
+		name = "Progress begins!"
+		add_country_modifier = { name = stakeholder_1 duration = -1 }
+	}
+}
+
+country_event = {
+	id = '8100210'
+	title = "Stakeholder Economy Strengthens"
+	desc = "Public/private partnerships blossom."
+	picture = "stake_holder"
+
+	trigger = { 
+		NOT = { has_country_modifier = { name = stakeholder_2 } }
+		NOT = { has_country_modifier = { name = stakeholder_3 } }
+		has_country_flag = stakeholder_economy
+		has_country_modifier = { name = stakeholder_1 }
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = {
+		name = "Society is flattening"
+		add_country_modifier = { name = stakeholder_2 duration = -1 }
+		remove_country_modifier = { name = stakeholder_1 }
+	}
+}
+
+country_event = {
+	id = '8100220'
+	title = "Stakeholder Economy Settles"
+	desc = "The rich and poor are at peace, for now......"
+	picture = "stake_holder"
+
+	trigger = { 
+		NOT = { has_country_modifier = { name = stakeholder_1 } }
+		NOT = { has_country_modifier = { name = stakeholder_3 } }
+		has_country_flag = stakeholder_economy
+		has_country_modifier = { name = stakeholder_2 }
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = {
+		name = "We are all equals, to an extent."
+		add_country_modifier = { name = stakeholder_3 duration = -1 }
+		remove_country_modifier = { name = stakeholder_2 }
+	}
+}
+
+#Stock Market Levels
+country_event = {
+	id = '8100300'
+	title = "Stocks are up and up"
+	desc = "The nature of money making is changing."
+	picture = "stockmarket"
+
+	trigger = { 
+		NOT = { has_country_modifier = { name = stockmarket_1 } }
+		NOT = { has_country_modifier = { name = stockmarket_2 } }
+		NOT = { has_country_modifier = { name = stockmarket_3 } }
+		NOT = { has_country_modifier = { name = stockmarket_4 } }
+		NOT = { has_country_modifier = { name = stockmarket_5 } }
+		has_country_flag = stockmarket_economy
+	}
+
+	mean_time_to_happen = { 
+		months = 24
+	}
+
+	option = {
+		name = "Interesting"
+		add_country_modifier = { name = stockmarket_1 duration = -1 }
+	}
+}
+country_event = {
+	id = '8100310'
+	title = "The stockmarket has become increasingly important"
+	desc = "Theres a rush on Wall Street."
+	picture = "stockmarket"
+
+	trigger = { 
+		NOT = { has_country_modifier = { name = stockmarket_2 } }
+		NOT = { has_country_modifier = { name = stockmarket_3 } }
+		NOT = { has_country_modifier = { name = stockmarket_4 } }
+		NOT = { has_country_modifier = { name = stockmarket_5 } }
+		has_country_flag = stockmarket_economy
+		has_country_modifier = { name = stockmarket_1 }
+	}
+
+	mean_time_to_happen = { 
+		months = 24
+	}
+
+	option = {
+		name = "The stockmarket is booming."
+		add_country_modifier = { name = stockmarket_2 duration = -1 }
+		remove_country_modifier = { name = stockmarket_1 }
+	}
+}
+country_event = {
+	id = '8100320'
+	title = "Power tilts towards finance"
+	desc = "Money is becoming more concentrated."
+	picture = "stockmarket"
+
+	trigger = { 
+		NOT = { has_country_modifier = { name = stockmarket_1 } }
+		NOT = { has_country_modifier = { name = stockmarket_3 } }
+		NOT = { has_country_modifier = { name = stockmarket_4 } }
+		NOT = { has_country_modifier = { name = stockmarket_5 } }
+		has_country_flag = stockmarket_economy
+		has_country_modifier = { name = stockmarket_2 }
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = {
+		name = "The few are becoming the powerful"
+		add_country_modifier = { name = stockmarket_3 duration = -1 }
+		remove_country_modifier = { name = stockmarket_2 }
+	}
+}
+country_event = {
+	id = '8100330'
+	title = "The Rich grow fat"
+	desc = "The Stock Market sucks power to itself."
+	picture = "stockmarket"
+
+	trigger = { 
+		NOT = { has_country_modifier = { name = stockmarket_2 } }
+		NOT = { has_country_modifier = { name = stockmarket_4 } }
+		NOT = { has_country_modifier = { name = stockmarket_1 } }
+		NOT = { has_country_modifier = { name = stockmarket_5 } }
+		has_country_flag = stockmarket_economy
+		has_country_modifier = { name = stockmarket_3 }
+		has_province_modifier = { name = stockmarket_deregulate }
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = {
+		name = "Money is hungry"
+		add_country_modifier = { name = stockmarket_4 duration = -1 }
+		remove_country_modifier = { name = stockmarket_3 }
+	}
+}
+country_event = {
+	id = 'XXX340X'
+	title = "The Stock Market Dominates the Economy"
+	desc = "Money, money, money."
+	picture = "stockmarket"
+
+	trigger = { 
+		NOT = { has_country_modifier = { name = stockmarket_2 } }
+		NOT = { has_country_modifier = { name = stockmarket_3 } }
+		NOT = { has_country_modifier = { name = stockmarket_4 } }
+		NOT = { has_country_modifier = { name = stockmarket_1 } }
+		has_country_flag = stockmarket_economy
+		has_country_modifier = { name = stockmarket_4 }
+	}
+
+	mean_time_to_happen = { 
+		months = 120
+	}
+
+	option = {
+		name = "Economic minority rule"
+		add_country_modifier = { name = stockmarket_5 duration = -1 }
+		remove_country_modifier = { name = stockmarket_4 }
+	}
+}
+
+country_event = {
+	id = '8100350'
+	title = "The Fight Against The Rich Is Over"
+	desc = "Our fight to reform the economy is over."
+	picture = "economic_corruption"
+
+	trigger = { 
+		has_country_modifier = { name = stockmarket_6 }
+		NOT = { has_country_modifier = { name = stockmarket_1 } }
+		NOT = { has_country_modifier = { name = stockmarket_2 } }
+		NOT = { has_country_modifier = { name = stockmarket_3 } }
+		NOT = { has_country_modifier = { name = stockmarket_4 } }
+		NOT = { has_country_modifier = { name = stockmarket_5 } }
+		has_country_flag = stockmarket_economy
+		has_country_flag = end_stockmarket_economy
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+	option = {
+		name = "The Rich Prevail!"
+		ai_chance = { 
+			factor = 0
+			modifier = { 
+				factor = 1 
+				OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative ruling_party_ideology = populist ruling_party_ideology = communist_social }
+			}
+		}
+		remove_country_modifier = { name = stockmarket_6 }
+		add_country_modifier = { name = stockmarket_5 duration = -1 }
+		add_country_modifier = { name = economic_boom duration = 12 }
+		gender_rights = gender_role_based
+	}
+	option = {
+		name = "The reforms succeed!"
+		ai_chance = { 
+			factor = 0
+			modifier = { 
+				factor = 1 
+				NOT = { OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative ruling_party_ideology = populist ruling_party_ideology = communist_social } }
+			}
+		}
+		remove_country_modifier = stockmarket_5
+		clr_country_flag = { name = stockmarket_economy }
+		add_country_flag = { name = stakeholder_economy }
+		add_country_modifier = { name = stakeholder_1 duration = -1 }
+		gender_rights = feminist
+	}
+}
+
+#Economic Corruption Levels
+country_event = {
+	id = '8100400'
+	title = "Small Scale Economic Corruption"
+	desc = "The seeds of economic corruption have been sown."
+	picture = "economic_corruption"
+
+	trigger = { 
+		NOT = { has_country_modifier = { name = corrupt_1 } }
+		NOT = { has_country_modifier = { name = corrupt_2 } }
+		NOT = { has_country_modifier = { name = corrupt_3 } }
+		NOT = { has_country_modifier = { name = corrupt_4 } }
+		has_country_flag = economic_corruption
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = {
+		name = "More power to the elites!"
+		add_country_modifier = { name = corrupt_1 duration = -1 }
+	}
+}
+country_event = {
+	id = '8100410'
+	title = "Economic Corruption Takes Hold"
+	desc = "Our economy is becoming increasingly corrupt."
+	picture = "economic_corruption"
+
+	trigger = { 
+		has_country_modifier = { name = corrupt_1 }
+		NOT = { has_country_modifier = { name = corrupt_2 } }
+		NOT = { has_country_modifier = { name = corrupt_3 } }
+		NOT = { has_country_modifier = { name = corrupt_4 } }
+		has_country_flag = economic_corruption
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = {
+		name = "Corruption is pervasive."
+		add_country_modifier = { name = corrupt_2 duration = -1 }
+		remove_country_modifier = { name = corrupt_1 }
+	}
+}
+country_event = {
+	id = '8100420'
+	title = "Economic Corruption Dominates"
+	desc = "Our economy is has been taken over by private interests."
+	picture = "economic_corruption"
+
+	trigger = { 
+		has_country_modifier = { name = corrupt_2 }
+		NOT = { has_country_modifier = { name = corrupt_1 } }
+		NOT = { has_country_modifier = { name = corrupt_3 } }
+		NOT = { has_country_modifier = { name = corrupt_4 } }
+		has_country_flag = economic_corruption
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = {
+		name = "The goverment and the elites are entangled"
+		add_country_modifier = { name = corrupt_3 duration = -1 }
+		remove_country_modifier = { name = corrupt_2 }
+	}
+}
+country_event = {
+	id = '8100430'
+	title = "The Fight Against Corruption Is Over"
+	desc = "Our fight against corruption has reached it's peak."
+	picture = "economic_corruption"
+
+	trigger = { 
+		has_country_modifier = { name = corrupt_4 }
+		NOT = { has_country_modifier = { name = corrupt_1 } }
+		NOT = { has_country_modifier = { name = corrupt_2 } }
+		NOT = { has_country_modifier = { name = corrupt_3 } }
+		has_country_flag = economic_corruption
+		has_country_flag = end_economic_corruption
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+	option = {
+		name = "Corruption is forever!"
+		ai_chance = { 
+			factor = 0
+			modifier = { 
+				factor = 1 
+				OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative ruling_party_ideology = populist ruling_party_ideology = communist_social }
+			}
+		}
+		remove_country_modifier = { name = corrupt_4 }
+		add_country_modifier = { name = corrupt_3 duration = -1 }
+		add_country_modifier = { name = economic_boom duration = 12 }
+	}
+	option = {
+		name = "The reforms succeed!"
+		ai_chance = { 
+			factor = 0
+			modifier = { 
+				factor = 1 
+				NOT = { OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative ruling_party_ideology = populist ruling_party_ideology = communist_social } }
+			}
+		}
+		remove_country_modifier = corrupt_4
+		clr_country_flag = { name = economic_corruption }
+		add_country_modifier = { name = stock_market_crash duration = 12 }
+	}
+}
+
+#Economic Growth
+country_event = {
+	id = '8100500'
+	title = "Growth Begins"
+	desc = "Our government begins a policy of growth."
+	picture = "growth_economy"
+
+	trigger = { 
+		NOT = { has_country_modifier = { name = growth_1 } }
+		NOT = { has_country_modifier = { name = growth_2 } }
+		NOT = { has_country_modifier = { name = growth_3 } }
+		NOT = { has_country_modifier = { name = growth_4 } }
+		NOT = { has_country_modifier = { name = growth_5 } }
+		has_country_flag = growth_economy
+		NOT = { has_country_modifier = in_bankrupcy }
+	}
+
+	mean_time_to_happen = { 
+		months = 12
+	}
+
+	option = {
+		name = "Forward to the future!"
+		add_country_modifier = { name = growth_1 duration = -1 }
+	}
+}
+country_event = {
+	id = '8100510'
+	title = "The Effects of Growth"
+	desc = "We have begun to see the effects of our economic growth."
+	picture = "growth_economy"
+
+	trigger = { 
+		has_country_modifier = { name = growth_1 }
+		NOT = { has_country_modifier = { name = growth_2 } }
+		NOT = { has_country_modifier = { name = growth_3 } }
+		NOT = { has_country_modifier = { name = growth_4 } }
+		NOT = { has_country_modifier = { name = growth_5 } }
+		has_country_flag = growth_economy
+		NOT = { has_country_modifier = in_bankrupcy }
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = {
+		name = "We grow together."
+		add_country_modifier = { name = growth_2 duration = -1 }
+		remove_country_modifier = { name = growth_1 }
+	}
+}
+country_event = {
+	id = '8100520'
+	title = "The Economy Speeds Up"
+	desc = "Our economy is hurtling forward."
+	picture = "growth_economy"
+
+	trigger = { 
+		has_country_modifier = { name = growth_2 }
+		NOT = { has_country_modifier = { name = growth_1 } }
+		NOT = { has_country_modifier = { name = growth_3 } }
+		NOT = { has_country_modifier = { name = growth_4 } }
+		NOT = { has_country_modifier = { name = growth_5 } }
+		has_country_flag = growth_economy
+		has_country_flag = increase_growth_economy
+		NOT = { has_country_modifier = in_bankrupcy }
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = {
+		name = "Growth is booming."
+		add_country_modifier = { name = growth_3 duration = -1 }
+		remove_country_modifier = { name = growth_2 }
+	}
+}
+country_event = {
+	id = '8100530'
+	title = "Growth Fuels Growth"
+	desc = "Economic growth is fueling the growth of our society."
+	picture = "growth_economy"
+
+	trigger = { 
+		has_country_modifier = { name = growth_3 }
+		NOT = { has_country_modifier = { name = growth_2 } }
+		NOT = { has_country_modifier = { name = growth_1 } }
+		NOT = { has_country_modifier = { name = growth_4 } }
+		NOT = { has_country_modifier = { name = growth_5 } }
+		has_country_flag = growth_economy
+		has_country_flag = commit_growth_economy
+		NOT = { has_country_modifier = in_bankrupcy }
+	}
+
+	mean_time_to_happen = { 
+		months = 120
+	}
+
+	option = {
+		name = "Growth is a feedback loop!"
+		add_country_modifier = { name = growth_4 duration = -1 }
+		remove_country_modifier = { name = growth_3 }
+	}
+}
+country_event = {
+	id = '8100540'
+	title = "Growth Has Nearly Succeeded"
+	desc = "We are beginning to caatch-up with the rest of the world."
+	picture = "growth_economy"
+
+	trigger = { 
+		has_country_modifier = { name = growth_4 }
+		NOT = { has_country_modifier = { name = growth_2 } }
+		NOT = { has_country_modifier = { name = growth_3 } }
+		NOT = { has_country_modifier = { name = growth_1 } }
+		NOT = { has_country_modifier = { name = growth_5 } }
+		has_country_flag = growth_economy
+		NOT = { has_country_modifier = in_bankrupcy }
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = {
+		name = "We are reaching our potential."
+		add_country_modifier = { name = growth_5 duration = -1 }
+		remove_country_modifier = { name = growth_4 }
+	}
+}
+
+country_event = {
+	id = '8100550'
+	title = "We are a developed!"
+	desc = "Our nation has taken its place in the developed world."
+	picture = "growth_economy"
+
+	trigger = { 
+		has_country_modifier = { name = growth_5 }
+		NOT = { has_country_modifier = { name = growth_2 } }
+		NOT = { has_country_modifier = { name = growth_3 } }
+		NOT = { has_country_modifier = { name = growth_1 } }
+		NOT = { has_country_modifier = { name = growth_5 } }
+		has_country_flag = growth_economy
+		NOT = { has_country_modifier = in_bankrupcy }
+		has_country_modifier = affluent_society_1
+		any_owned_province = { is_capital = yes has_province_modifier = dev_5 }
+		any_owned_province = { is_capital = no has_province_modifier = dev_5 }
+		OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 government = socialist_democracy }
+	}
+
+	mean_time_to_happen = { 
+		months = 36
+	}
+
+	option = {
+		name = "We take our place at the table."
+		add_country_modifier = { name = growth_5 duration = -1 }
+		any_owned = { limit = { is_state_capital = yes } add_province_modifier = { name = dev_5 } }
+		any_owned = { limit = { is_state_capital = yes } remove_province_modifier = { name = dev_4 } }
+		any_owned = { limit = { is_state_capital = yes } remove_province_modifier = { name = dev_3 } }
+		any_owned = { limit = { is_state_capital = yes } remove_province_modifier = { name = dev_2 } }
+		any_owned = { limit = { is_state_capital = yes } remove_province_modifier = { name = dev_1 } }
+		remove_country_modifier = { name = growth_5 }
+		country_event = 8100560
+	}
+}
+
+country_event = {
+	id = '8100560'
+	title = "Who are we?"
+	desc = "What is our next step in our economic journey?"
+	picture = "growth_economy"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The stockmarket should rule!"
+		ai_chance = { 
+			factor = 0 
+			modifier = { 
+				factor = 1
+				OR = { ruling_party_ideology = conservative ruling_party_ideology = traditionalist ruling_party_ideology = populist ruling_party_ideology = liberal ruling_party_ideology = big_tent }
+			}
+		}
+		add_country_modifier = { name = stockmarket_1 duration = -1 }
+		add_country_flag = { name = stockmarket_economy }
+		add_country_modifier = { name = economic_boom duration = 60 }
+	}
+	option = {
+		name = "Capitalism will be held to social standards!"
+		ai_chance = { 
+			factor =  0
+			modifier = { 
+				factor = 1
+				OR = { AND = { NOT = { government = socialist_democracy } ruling_party_ideology = socialist } ruling_party_ideology = progressive }
+			}
+		}
+		add_country_modifier = { name = stakeholder_1 duration = -1 }
+		add_country_flag = { name = stakeholder_economy }
+		add_country_modifier = { name = economic_boom duration = 60 }
+	}
+	option = {
+		name = "Worker democracy is the future!"
+		ai_chance = { 
+			factor = 0
+			modifier = { 
+				factor = 1 
+				OR = { AND = { government = socialist_democracy ruling_party_ideology = socialist } ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			}
+		}
+		add_country_modifier = { name = co_op_1 duration = -1 }
+		add_country_flag = { name = co_op_interest }
+		add_country_modifier = { name = economic_boom duration = 60 }
+	}
+}
+
+#Collectivisation Levels
+country_event = {
+	id = '8100600'
+	title = "Government Begins Collectivisation"
+	desc = "The Government has begun to seize the means of production."
+	picture = "economy_collectivised"
+
+	trigger = { 
+		NOT = { has_country_modifier = { name = collectivised_1 } }
+		NOT = { has_country_modifier = { name = collectivised_2 } }
+		NOT = { has_country_modifier = { name = collectivised_3 } }
+		NOT = { has_country_modifier = { name = collectivised_4 } }
+		has_country_flag = collectivised_economy
+	}
+
+	mean_time_to_happen = { 
+		months = 12
+	}
+
+	option = {
+		name = "Seize the means of production...... for the people."
+		add_country_modifier = { name = collectivised_1 duration = -1 }
+	}
+}
+country_event = {
+	id = '8100610'
+	title = "Government Collectivisation Gains Momentum"
+	desc = "More and more of economy is becoming collectivised."
+	picture = "economy_collectivised"
+
+	trigger = { 
+		has_country_modifier = { name = collectivised_1 }
+		NOT = { has_country_modifier = { name = collectivised_2 } }
+		NOT = { has_country_modifier = { name = collectivised_3 } }
+		NOT = { has_country_modifier = { name = collectivised_4 } }
+		has_country_flag = collectivised_economy
+	}
+
+	mean_time_to_happen = { 
+		months = 24
+	}
+
+	option = {
+		name = "Control is within our grasp."
+		add_country_modifier = { name = collectivised_2 duration = -1 }
+		remove_country_modifier = { name = collectivised_1 }
+	}
+}
+country_event = {
+	id = '8100620'
+	title = "Government Collectivisation Complete"
+	desc = "The Government now controls the means of production."
+	picture = "economy_collectivised"
+
+	trigger = { 
+		has_country_modifier = { name = collectivised_2 }
+		NOT = { has_country_modifier = { name = collectivised_1 } }
+		NOT = { has_country_modifier = { name = collectivised_3 } }
+		NOT = { has_country_modifier = { name = collectivised_4 } }
+		has_country_flag = collectivised_economy
+	}
+
+	mean_time_to_happen = { 
+		months = 36
+	}
+
+	option = {
+		name = "Fully Planned Democracy"
+		add_country_modifier = { name = collectivised_3 duration = -1 }
+		remove_country_modifier = { name = collectivised_2 }
+	}
+}
+country_event = {
+	id = '8100630'
+	title = "Market Reforms Take Affect"
+	desc = "The Government's major market reforms have revolutionised the collectivist system."
+	picture = "economy_collectivised"
+
+	trigger = { 
+		has_country_flag = collectived_market_reforms
+		has_country_modifier = { name = collectivised_3 }
+		NOT = { has_country_modifier = { name = collectivised_1 } }
+		NOT = { has_country_modifier = { name = collectivised_2 } }
+		NOT = { has_country_modifier = { name = collectivised_4 } }
+		has_country_flag = collectivised_economy
+		ruling_party_ideology = communist_social
+	}
+
+	mean_time_to_happen = { 
+		months = 12
+	}
+
+	option = {
+		name = "Socialism...... but not yet."
+		add_country_modifier = { name = collectivised_4 duration = -1 }
+		add_country_modifier = { name = economic_boom duration = 60 }
+		remove_country_modifier = { name = collectivised_3 }
+	}
+}
+
+
+#New Provincial Co-operatives
+province_event = {
+	id = '8100150'
+	title = "Early Co-ops Bloom"
+	desc = "Our people hve begun to experiment with economic democracy."
+	picture = "Revolution"
+	
+	trigger = {
+		year = 1990
+		civilized = yes
+		is_colonial = no
+		OR = {
+			has_pop_type = artisans
+			has_pop_type = clerks
+			has_pop_type = craftsmen
+			has_pop_type = labourers
+			has_pop_type = farmers
+		}
+		NOT = { has_province_modifier = early_co_ops }
+		owner = {
+			OR = {
+				government = democracy
+				government = hms_government
+				government = democracy1
+				government = hms_government1
+				has_country_modifier = grow_co_ops
+			}
+			OR = {
+				ruling_party_ideology = communist
+				ruling_party_ideology = communist_social
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+			}
+			OR = {
+				communist = 20
+				communist_social = 20
+				socialist = 20
+				progressive = 20
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 1.2
+			owner = {
+				nationalvalue = nv_liberty
+			}
+		}
+		modifier = {
+			factor = 1.2
+			owner = {
+				nationalvalue = nv_order
+				NOT = {
+					ruling_party_ideology = socialist
+					ruling_party_ideology = communist
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { poor_strata_life_needs = 0.8 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { poor_strata_everyday_needs = 0.4 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { middle_strata_life_needs = 0.6 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { middle_strata_everyday_needs = 0.3 }
+		}
+		modifier = {
+			factor = 1.5
+			socialist = 50
+		}
+		modifier = {
+			factor = 1.5
+			socialist = 60
+		}
+		modifier = {
+			factor = 1.5
+			socialist = 80
+		}
+		modifier = {
+			factor = 1.5
+			communist = 50
+		}
+		modifier = {
+			factor = 1.5
+			communist = 60
+		}
+		modifier = {
+			factor = 1.5
+			communist = 80
+		}
+		modifier = {
+			factor = 1.5
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.5
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.5
+			consciousness = 8
+		}
+	}	
+	option = {
+		name = "Where will this experiment lead?"
+		state_scope = {
+			any_owned = {
+				limit = {
+					is_colonial = no
+				}
+				add_province_modifier = {
+					name = early_co_ops
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+province_event = {
+	id = '8100160'
+	title = "Independent Co-ops Are Expanding"
+	desc = "The local co-op experiment is gaining momentum as more and more people engage."
+	picture = "Revolution"
+	trigger = {
+		year = 2000
+		civilized = yes
+		is_colonial = no
+		OR = {
+			has_pop_type = artisans
+			has_pop_type = clerks
+			has_pop_type = craftsmen
+			has_pop_type = labourers
+			has_pop_type = farmers
+		}
+		NOT = { has_province_modifier = expanding_co_ops }
+		has_province_modifier = early_co_ops
+		owner = {
+			OR = {
+				government = democracy
+				government = hms_government
+				government = democracy1
+				government = hms_government1
+				has_country_modifier = grow_co_ops
+			}
+			OR = {
+				ruling_party_ideology = communist
+				ruling_party_ideology = communist_social
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+			}
+			OR = {
+				communist = 30
+				communist_social = 30
+				socialist = 30
+				progressive = 30
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 1.2
+			owner = {
+				nationalvalue = nv_liberty
+			}
+		}
+		modifier = {
+			factor = 1.2
+			owner = {
+				nationalvalue = nv_order
+				NOT = {
+					ruling_party_ideology = socialist
+					ruling_party_ideology = communist
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { poor_strata_life_needs = 0.8 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { poor_strata_everyday_needs = 0.4 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { middle_strata_life_needs = 0.6 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { middle_strata_everyday_needs = 0.3 }
+		}
+		modifier = {
+			factor = 1.5
+			socialist = 50
+		}
+		modifier = {
+			factor = 1.5
+			socialist = 60
+		}
+		modifier = {
+			factor = 1.5
+			socialist = 80
+		}
+		modifier = {
+			factor = 1.5
+			communist = 50
+		}
+		modifier = {
+			factor = 1.5
+			communist = 60
+		}
+		modifier = {
+			factor = 1.5
+			communist = 80
+		}
+		modifier = {
+			factor = 1.5
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.5
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.5
+			consciousness = 8
+		}
+	}	
+	option = {
+		name = "Let's see what happens."
+		state_scope = {
+			any_owned = {
+				limit = {
+					is_colonial = no
+				}
+				remove_province_modifier = { name = early_co_ops }
+				add_province_modifier = {
+					name = expanding_co_ops
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+province_event = {
+	id = '8100170'
+	title = "Co-operatisation Becomes Ingrained"
+	desc = "The co-operative movement has become an established pillar of the local economy"
+	picture = "Revolution"	
+	trigger = {
+		year = 2000
+		civilized = yes
+		is_colonial = no
+		OR = {
+			has_pop_type = artisans
+			has_pop_type = clerks
+			has_pop_type = craftsmen
+			has_pop_type = labourers
+			has_pop_type = farmers
+		}
+		NOT = { has_province_modifier = established_co_ops }
+		has_province_modifier = expanding_co_ops
+		owner = {
+			OR = {
+				government = democracy
+				government = hms_government
+				government = democracy1
+				government = hms_government1
+				has_country_flag = fund_co_ops
+			}
+			OR = {
+				ruling_party_ideology = communist
+				ruling_party_ideology = communist_social
+				ruling_party_ideology = socialist
+			}
+			OR = {
+				communist = 40
+				communist_social = 40
+				socialist = 40
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 1.2
+			owner = {
+				nationalvalue = nv_liberty
+			}
+		}
+		modifier = {
+			factor = 1.2
+			owner = {
+				nationalvalue = nv_order
+				NOT = {
+					ruling_party_ideology = socialist
+					ruling_party_ideology = communist
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { poor_strata_life_needs = 0.8 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { poor_strata_everyday_needs = 0.4 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { middle_strata_life_needs = 0.6 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { middle_strata_everyday_needs = 0.3 }
+		}
+		modifier = {
+			factor = 1.5
+			socialist = 50
+		}
+		modifier = {
+			factor = 1.5
+			socialist = 60
+		}
+		modifier = {
+			factor = 1.5
+			socialist = 80
+		}
+		modifier = {
+			factor = 1.5
+			communist = 50
+		}
+		modifier = {
+			factor = 1.5
+			communist = 60
+		}
+		modifier = {
+			factor = 1.5
+			communist = 80
+		}
+		modifier = {
+			factor = 1.5
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.5
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.5
+			consciousness = 8
+		}
+	}
+	option = {
+		name = "Power to the people!"
+		gender_rights = feminist
+		state_scope = {
+			any_owned = {
+				limit = {
+					is_colonial = no
+				}
+				remove_province_modifier = { name = expanding_co_ops }
+				add_province_modifier = {
+					name = established_co_ops
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+
+
+province_event = {
+	id = '8100180'
+	title = "Co-ops Dominate"
+	desc = "The co-operative movement has become the dominant force in this local economy."
+	picture = "Revolution"
+	trigger = {
+		year = 2000
+		civilized = yes
+		is_colonial = no
+		OR = {
+			has_pop_type = artisans
+			has_pop_type = clerks
+			has_pop_type = craftsmen
+			has_pop_type = labourers
+			has_pop_type = farmers
+		}
+		NOT = { has_province_modifier = dominant_co_ops }
+		has_province_modifier = full_co_ops
+		owner = {
+			OR = {
+				government = democracy
+				government = hms_government
+				government = democracy1
+				government = hms_government1
+				has_country_flag = instatutionalise_co_ops
+			}
+			OR = {
+				ruling_party_ideology = communist
+				ruling_party_ideology = communist_social
+				ruling_party_ideology = socialist
+			}
+			OR = {
+				communist = 50
+				communist_social = 50
+				socialist = 50
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 1.2
+			owner = {
+				nationalvalue = nv_liberty
+			}
+		}
+		modifier = {
+			factor = 1.2
+			owner = {
+				nationalvalue = nv_order
+				NOT = {
+					ruling_party_ideology = socialist
+					ruling_party_ideology = communist
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { poor_strata_life_needs = 0.8 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { poor_strata_everyday_needs = 0.4 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { middle_strata_life_needs = 0.6 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { middle_strata_everyday_needs = 0.3 }
+		}
+		modifier = {
+			factor = 1.5
+			socialist = 50
+		}
+		modifier = {
+			factor = 1.5
+			socialist = 60
+		}
+		modifier = {
+			factor = 1.5
+			socialist = 80
+		}
+		modifier = {
+			factor = 1.5
+			communist = 50
+		}
+		modifier = {
+			factor = 1.5
+			communist = 60
+		}
+		modifier = {
+			factor = 1.5
+			communist = 80
+		}
+		modifier = {
+			factor = 1.5
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.5
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.5
+			consciousness = 8
+		}
+	}	
+	option = {
+		name = "Try stop us now."
+		gender_rights = feminist
+		state_scope = {
+			any_owned = {
+				limit = {
+					is_colonial = no
+				}
+				remove_province_modifier = { name = full_co_ops }
+				add_province_modifier = {
+					name = dominant_co_ops
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+province_event = {
+	id = '8100190'
+	title = "Co-operatisation Wins!"
+	desc = "The local economy is a democracy!"
+	picture = "Revolution"	
+	trigger = {
+		year = 2000
+		civilized = yes
+		is_colonial = no
+		OR = {
+			has_pop_type = artisans
+			has_pop_type = clerks
+			has_pop_type = craftsmen
+			has_pop_type = labourers
+			has_pop_type = farmers
+		}
+		NOT = { has_province_modifier = only_co_ops }
+		has_province_modifier = dominant_co_ops
+		owner = {
+			OR = {
+				government = democracy
+				government = hms_government
+				government = democracy1
+				government = hms_government1
+				has_country_flag = total_co_ops
+			}
+			OR = {
+				ruling_party_ideology = communist
+				ruling_party_ideology = communist_social
+				ruling_party_ideology = socialist
+			}
+			OR = {
+				communist = 60
+				communist_social = 60
+				socialist = 60
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 1.2
+			owner = {
+				nationalvalue = nv_liberty
+			}
+		}
+		modifier = {
+			factor = 1.2
+			owner = {
+				nationalvalue = nv_order
+				NOT = {
+					ruling_party_ideology = socialist
+					ruling_party_ideology = communist
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { poor_strata_life_needs = 0.8 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { poor_strata_everyday_needs = 0.4 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { middle_strata_life_needs = 0.6 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { middle_strata_everyday_needs = 0.3 }
+		}
+		modifier = {
+			factor = 1.5
+			socialist = 50
+		}
+		modifier = {
+			factor = 1.5
+			socialist = 60
+		}
+		modifier = {
+			factor = 1.5
+			socialist = 80
+		}
+		modifier = {
+			factor = 1.5
+			communist = 50
+		}
+		modifier = {
+			factor = 1.5
+			communist = 60
+		}
+		modifier = {
+			factor = 1.5
+			communist = 80
+		}
+		modifier = {
+			factor = 1.5
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.5
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.5
+			consciousness = 8
+		}
+	}
+	option = {
+		name = "Voting righst for all!"
+		gender_rights = feminist
+		state_scope = {
+			any_owned = {
+				limit = {
+					is_colonial = no
+				}
+				remove_province_modifier = { name = dominant_co_ops }
+				add_province_modifier = {
+					name = only_co_ops
+					duration = -1
+				}
+			}
+		}
+	}
+}

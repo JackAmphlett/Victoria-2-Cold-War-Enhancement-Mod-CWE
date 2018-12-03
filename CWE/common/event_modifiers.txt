@@ -6360,3 +6360,361 @@ flooded = {
 	immigrant_attract = -0.2
 	icon = 20
 }
+
+#Co-operative Economy
+co_ops_1 = {
+	tax_efficiency = 0.05
+	factory_throughput = 0.05
+	RGO_throughput = 0.05
+	artisan_output = 0.1
+	poor_income_modifier = 0.1
+	middle_income_modifier = 0.1
+	icon = 10
+}
+co_ops_2 = {
+	tax_efficiency = 0.1
+	factory_throughput = 0.1
+	RGO_throughput = 0.1
+	artisan_output = 0.15
+	poor_income_modifier = 0.3
+	middle_income_modifier = 0.3
+	rich_income_modifier = -0.1
+	icon = 10
+}
+co_ops_3 = {
+	tax_efficiency = 0.15
+	factory_throughput = 0.15
+	RGO_throughput = 0.15
+	artisan_output = 0.2
+	poor_income_modifier = 0.5
+	middle_income_modifier = 0.5
+	rich_income_modifier = -0.3
+	icon = 10
+}
+co_ops_4 = {
+	tax_efficiency = 0.2
+	factory_throughput = 0.2
+	RGO_throughput = 0.2
+	artisan_output = 0.25
+	poor_income_modifier = 1
+	middle_income_modifier = 1
+	rich_income_modifier = -2
+	icon = 10
+}
+co_ops_5 = {
+	tax_efficiency = 0.25
+	factory_throughput = 0.25
+	RGO_throughput = 0.25
+	artisan_output = 0.3
+	poor_income_modifier = 2
+	middle_income_modifier = 2
+	rich_income_modifier = -6
+	icon = 10
+}
+#Stakeholder Economy
+stakeholder_1 = {
+	tax_efficiency = 0.05
+	poor_income_modifier = 0.1
+	middle_income_modifier = 0.1
+	rich_income_modifier = 0.2
+	education_efficiency_modifier = 0.1
+	research_points_modifier = 0.025
+	social_reform_desire = 0.10
+	political_reform_desire = 0.10
+	icon = 4
+}
+stakeholder_2 = {
+	tax_efficiency = 0.1
+	poor_income_modifier = 0.2
+	middle_income_modifier = 0.2
+	rich_income_modifier = 0.3
+	education_efficiency_modifier = 0.15
+	research_points_modifier = 0.05
+	social_reform_desire = 0.15
+	political_reform_desire = 0.15
+	icon = 4
+}
+stakeholder_3 = {
+	tax_efficiency = 0.15
+	poor_income_modifier = 0.25
+	middle_income_modifier = 0.25
+	rich_income_modifier = 0.4
+	education_efficiency_modifier = 0.25
+	research_points_modifier = 0.1
+	social_reform_desire = 0.25
+	political_reform_desire = 0.25
+	icon = 4
+}
+
+#Stock Market Economy
+stockmarket_1 = {
+	RGO_output = 0.1
+	poor_income_modifier = -0.05
+	middle_income_modifier = -0.05
+	rich_income_modifier = 0.2
+	political_reform_desire = -0.1
+	commerce_tech_research_bonus = 0.05
+	icon = 4
+}
+stockmarket_2 = {
+	RGO_output = 0.15
+	poor_income_modifier = -0.1
+	middle_income_modifier = -0.1
+	rich_income_modifier = 0.4
+	political_reform_desire = -0.15
+	commerce_tech_research_bonus = 0.1
+	icon = 4
+}
+stockmarket_3 = {
+	RGO_output = 0.2
+	poor_income_modifier = -0.15
+	middle_income_modifier = -0.15
+	rich_income_modifier = 0.6
+	political_reform_desire = -0.2
+	commerce_tech_research_bonus = 0.2
+	icon = 4
+}
+stockmarket_4 = {
+	RGO_output = 0.25
+	poor_income_modifier = -0.2
+	middle_income_modifier = -0.2
+	rich_income_modifier = 0.8
+	political_reform_desire = -0.25
+	commerce_tech_research_bonus = 0.3
+	icon = 4
+}
+stockmarket_5 = {
+	RGO_output = 0.3
+	poor_income_modifier = -0.25
+	middle_income_modifier = -0.25
+	rich_income_modifier = 1
+	political_reform_desire = -0.3
+	commerce_tech_research_bonus = 0.4
+	icon = 4
+}
+stockmarket_6 = {
+	RGO_output = 0.1
+	poor_income_modifier = 0.25
+	middle_income_modifier = 0.25
+	rich_income_modifier = -0.5
+	rich_everyday_needs = 0.2
+	middle_everyday_needs = -0.2
+	poor_everyday_needs = -0.2
+	ruling_party_support = -1
+	political_reform_desire = 0.5
+	social_reform_desire = 0.5
+	icon = 4
+}
+
+#Collectivised Economy
+collectivised_1 = {
+	tax_efficiency = 0.1
+	factory_output = 0.1
+	RGO_output = 0.15
+	poor_income_modifier = -0.1
+	middle_income_modifier = -0.1
+	rich_income_modifier = -0.1
+	industrial_tech_research_bonus = 0.1
+	ruling_party_support = 0.4
+	political_reform_desire = -0.1
+	icon = 11
+}
+collectivised_2 = {
+	tax_efficiency = 0.2
+	factory_output = 0.15
+	RGO_output = 0.2
+	poor_income_modifier = -0.15
+	middle_income_modifier = -0.15
+	rich_income_modifier = -0.15
+	industrial_tech_research_bonus = 0.2
+	ruling_party_support = 0.8
+	political_reform_desire = -0.2
+	icon = 11
+}
+collectivised_3 = {
+	tax_efficiency = 0.3
+	factory_output = 0.2
+	RGO_output = 0.25
+	poor_income_modifier = -0.2
+	middle_income_modifier = -0.2
+	rich_income_modifier = -0.2
+	industrial_tech_research_bonus = 0.4
+	ruling_party_support = 1.2
+	political_reform_desire = -0.3
+	icon = 11
+}
+collectivised_3 = {
+	tax_efficiency = 0.3
+	factory_output = 0.2
+	RGO_output = 0.25
+	poor_income_modifier = -0.2
+	middle_income_modifier = -0.2
+	rich_income_modifier = -0.2
+	industrial_tech_research_bonus = 0.4
+	ruling_party_support = 1.2
+	political_reform_desire = -0.3
+	icon = 11
+}
+collectivised_4 = {
+	tax_efficiency = 0.2
+	factory_throughput = 0.2
+	RGO_output = 0.2
+	import_cost = -0.3
+	poor_income_modifier = -0.1
+	middle_income_modifier = -0.1
+	rich_income_modifier = 0.2
+	industrial_tech_research_bonus = 0.2
+	commerce_tech_research_bonus = 0.2
+	ruling_party_support = 1.2
+	political_reform_desire = -0.1
+	icon = 11
+}
+
+#Corrupt Economy
+corrupt_1 = {
+	tax_efficiency = 0.1
+	rich_income_modifier = 0.2
+	ruling_party_support = 0.6
+	political_reform_desire = -0.1
+	social_reform_desire = -0.1
+	icon = 6
+}
+corrupt_2 = {
+	tax_efficiency = 0.2
+	rich_income_modifier = 0.4
+	ruling_party_support = 0.8
+	political_reform_desire = -0.2
+	social_reform_desire = -0.2
+	icon = 6
+}
+corrupt_3 = {
+	tax_efficiency = 0.3
+	rich_income_modifier = 0.6
+	ruling_party_support = 1
+	political_reform_desire = -0.4
+	social_reform_desire = -0.4
+	icon = 6
+}
+corrupt_4 = {
+	tax_efficiency = -0.2
+	rich_income_modifier = -0.2
+	middle_income_modifier = 0.4
+	poor_income_modifier = 0.4
+	rich_everyday_needs = 0.2
+	middle_everyday_needs = -0.2
+	poor_everyday_needs = -0.2
+	ruling_party_support = -2
+	political_reform_desire = 1
+	social_reform_desire = 1
+	icon = 6
+}
+
+#Growth Economy
+growth_1 = {
+	rgo_output = 0.05
+	factory_throughput = 0.05
+	import_cost = -0.05
+	loan_interest = -0.05
+	education_efficiency_modifier = 0.05
+	cultural_tech_research_bonus = 0.05
+	social_reform_desire = 0.05
+	political_reform_desire = 0.05
+	ruling_party_support = 0.1
+	icon = 7
+}
+growth_2 = {
+	rgo_output = 0.1
+	factory_throughput = 0.1
+	import_cost = -0.1
+	loan_interest = -0.1
+	education_efficiency_modifier = 0.1
+	cultural_tech_research_bonus = 0.1
+	social_reform_desire = 0.1
+	political_reform_desire = 0.1
+	ruling_party_support = 0.2
+	icon = 7
+}
+growth_3 = {
+	rgo_output = 0.15
+	factory_throughput = 0.15
+	import_cost = -0.15
+	loan_interest = -0.15
+	education_efficiency_modifier = 0.15
+	cultural_tech_research_bonus = 0.15
+	social_reform_desire = 0.15
+	political_reform_desire = 0.15
+	ruling_party_support = 0.3
+	icon = 7
+}
+growth_4 = {
+	rgo_output = 0.2
+	factory_throughput = 0.2
+	import_cost = -0.2
+	loan_interest = -0.2
+	education_efficiency_modifier = 0.2
+	cultural_tech_research_bonus = 0.2
+	social_reform_desire = 0.2
+	political_reform_desire = 0.2
+	ruling_party_support = 0.4
+	icon = 7
+}
+growth_5 = {
+	rgo_output = 0.25
+	factory_throughput = 0.25
+	import_cost = -0.25
+	loan_interest = -0.25
+	education_efficiency_modifier = 0.25
+	cultural_tech_research_bonus = 0.25
+	social_reform_desire = 0.25
+	political_reform_desire = 0.25
+	ruling_party_support = 0.5
+	icon = 7
+}
+
+#Province Modifers
+ 
+early_co_ops = {
+	local_factory_throughput = 0.05
+	local_RGO_throughput = 0.05
+	local_artisan_output = 0.05
+	local_middle_income_modifier = 0.05
+	local_poor_income_modifier = 0.05
+	icon = 10
+}
+expanding_co_ops = {
+	local_factory_throughput = 0.075
+	local_RGO_throughput = 0.075
+	local_artisan_output = 0.075
+	local_middle_income_modifier = 0.075
+	local_poor_income_modifier = 0.075
+	icon = 10
+}
+estblished_co_ops = {
+	local_factory_throughput = 0.1
+	local_RGO_throughput = 0.1
+	local_artisan_output = 0.1
+	local_middle_income_modifier = 0.1
+	local_poor_income_modifier = 0.1
+	icon = 10
+}
+full_co_ops = {
+	local_factory_throughput = 0.125
+	local_RGO_throughput = 0.125
+	local_artisan_output = 0.125
+	local_middle_income_modifier = 0.125
+	local_poor_income_modifier = 0.125
+	icon = 10
+}
+only_co_ops = {
+	local_factory_throughput = 0.15
+	local_RGO_throughput = 0.15
+	local_artisan_output = 0.15
+	local_middle_income_modifier = 0.15
+	local_poor_income_modifier = 0.15
+	icon = 10
+}
+stockmarket_deregulate = {
+	local_RGO_output = 0.2
+	rich_income_modifier = 0.2
+	icon = 10
+}

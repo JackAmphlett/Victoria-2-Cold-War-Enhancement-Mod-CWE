@@ -1,0 +1,893 @@
+#Economic Structures (Stockholder, Stakeholder, Collectivised, Corrupted, Co-operative, Growth)
+
+#Stockmarket Economy - slow redistribtuion to elites
+stockmarket_economy = {
+	picture = "stockmarket_economy"
+	potential = {
+		international_financial_institutions = 1
+		lean_manufacturing = 1
+		rank = 60
+		NOT = { has_country_flag = stockmarket_economy }
+		NOT = { has_country_flag = co_op_interest }
+		NOT = { has_country_flag = stakeholder_economy }
+		NOT = { has_country_flag = growth_economy }
+		NOT = { has_country_flag = economic_corruption }
+		NOT = { has_country_flag = collectivised_economy }
+		NOT = { AND = { tag = RUS NOT = { year = 2030 } } }
+		OR = {
+			capital_scope = europe
+			capital_scope = north_america
+			capital_scope = oceania
+			rank = 24
+		}
+		OR = {
+			government = democracy
+			government = democracy1
+			government = hms_government
+			government = hms_government1
+		}
+		NOT = {
+			OR = {
+				ruling_party_ideology = communist_social
+				ruling_party_ideology = communist
+				AND = { ruling_party_ideology = socialist NOT = { rank = 24 } }
+				ruling_party_ideology = progressive
+			}
+		}
+	}
+	allow = {
+		capitalism = 1
+		neoliberalism = 1
+		election = no
+		war = no
+		NOT = { gender_rights = feminist }
+		NOT = { communist = 50 }
+		NOT = { communist_social = 50 }
+		NOT = { socialist = 60 }
+	} 
+	effect = {
+		add_country_flag = { name = stockmarket_economy }	
+		clr_country_flag = { name = economic_corruption }
+		clr_country_flag = { name = collectivised_economy } 
+		clr_country_flag = { name = stakeholder_economy }
+		clr_country_flag = { name = growth_economy }
+	}
+	ai_will_do = { 
+		factor = 1 
+	}
+}
+
+stockmarket_economy_deregulate = {
+	picture = "stockmarket_economy_deregulate"
+	potential = {
+		has_country_modifier = mnchigh
+		has_country_modifier = blrlow
+		has_country_modifier = cbihigh
+		has_country_flag = stockmarket_economy
+		NOT = { has_province_modifier = stockmarket_deregulate }
+		NOT = {
+			OR = {
+				safety_regulations = strict_regulations
+				safety_regulations = rigid_regulations
+				}
+					}
+		NOT = {
+			OR = {
+				ruling_party_ideology = communist_social
+				ruling_party_ideology = communist
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+			}
+		}
+	}
+	allow = {
+		capitalism = 1
+		neoliberalism = 1
+		election = no
+		war = no
+		NOT = { gender_rights = feminist }
+		NOT = { communist = 50 }
+		NOT = { communist_social = 50 }
+		NOT = { socialist = 60 }
+	} 
+	effect = {
+		any_owned = { limit = { trade_goods = credit } add_province_modifier = { name = stockmarket_deregulate duration = -1 } }
+		any_owned = { limit = { is_capital = yes } add_province_modifier = { name = stockmarket_deregulate duration = -1 } }
+	}
+	ai_will_do = { 
+		factor = 1 
+	}
+}
+end_stockmarket_economy = {
+	picture = "end_stockmarket_economy"
+	potential = {
+		has_country_flag = end_stockmarket_economy
+		NOT = { has_country_flag = end_stockmarket_economy }
+		OR = {
+			ruling_party_ideology = socialist
+			ruling_party_ideology = communist
+			ruling_party_ideology = communist_social
+			ruling_party_ideology = progressive
+		}
+	}
+	allow = {
+		average_consciousness = 8
+		average_militancy = 6
+		OR = {
+			has_country_modifier = in_bankrupcy
+			gender_rights = feminist
+			gender_rights = gender_promotive
+		}
+		OR = { 
+			socialist = 40
+			communist = 40
+			progressive = 40
+			communist_social = 60
+			liberal = 60
+			nationalist = 60
+		}
+	}
+	effect = {
+		add_country_flag = { name = end_stockmarket_economy }
+		add_country_modifier = { name = stockmarket_6 duration = -1 }
+		remove_country_modifier = { name = stockmarket_5 }
+	}
+}
+
+#Stake-holder Economy - societal progress and moderate redistribtuion
+stakeholder_economy = {
+	picture = "stakeholder_economy"
+	potential = {
+		NOT = { has_country_flag = stockmarket_economy }
+		NOT = { has_country_flag = co_op_interest }
+		NOT = { has_country_flag = growth_economy }
+		NOT = { has_country_flag = economic_corruption }
+		NOT = { has_country_flag = collectivised_economy }
+		comprehensive_education = 1
+		new_synthesis = 1
+		rank = 36
+		OR = {
+			capital_scope = europe
+			capital_scope = north_america
+			capital_scope = oceania
+			rank = 24
+		}
+		OR = {
+			government = democracy
+			government = democracy1
+			government = hms_government
+			government = hms_government1
+		}
+		OR = {
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+		}
+	}
+	allow = {
+		capitalism = 1
+		seventies_subcultures = 1
+		election = no
+		war = no
+		OR = {
+			gender_rights = feminist
+			gender_rights = gender_promotive
+		}
+		OR = { 
+			progressive = 40 
+			socialist = 40
+			liberal = 50
+		}
+	} 
+	effect = {
+		add_country_flag = { name = stakeholder_economy }
+		clr_country_flag = { name = economic_corruption }
+		clr_country_flag = { name = collectivised_economy } 
+		clr_country_flag = { name = stockmarket_economy }
+		clr_country_flag = { name = growth_economy }	
+		remove_country_modifier = { name = stockmarket_1 }
+		remove_country_modifier = { name = stockmarket_2 }
+		remove_country_modifier = { name = stockmarket_3 }
+		remove_country_modifier = { name = stockmarket_4 }
+		remove_country_modifier = { name = stockmarket_5 }
+		any_owned = { limit = { has_province_modifier = stockmarket_deregulate } remove_province_modifier = { name = stockmarket_deregulate } }
+		add_country_modifier = { name = stockcrash duration = 24 }
+	}
+	ai_will_do = { 
+		factor = 1 
+	}
+}
+
+#Collectivised Economy - fast redistribtuion to the state and industrial outputs
+collectivised_economy = {
+	picture = "collectivised_economy"
+	potential = {
+		NOT = { has_country_flag = stockmarket_economy }
+		NOT = { has_country_flag = co_op_interest }
+		NOT = { has_country_flag = stakeholder_economy }
+		NOT = { has_country_flag = growth_economy }
+		NOT = { has_country_flag = economic_corruption }
+		NOT = { has_country_flag = collectivised_economy }
+		OR = {
+			ruling_party_ideology = communist
+			ruling_party_ideology = communist_social
+		}
+		OR = {
+			government = proletarian_dictatorship
+			government = proletarian_dictatorship1
+		}
+	}		
+	allow = {	
+		cold_war =  1
+		heavy_mining = 1
+		war = no
+		election = no
+	}
+	effect = {
+		add_country_flag = { name = collectivised_economy }
+		clr_country_flag = { name = economic_corruption } 
+		clr_country_flag = { name = stakeholder_economy } 
+		clr_country_flag = { name = co_op_interest } 
+		clr_country_flag = { name = stockmarket_economy }
+		clr_country_flag = { name = growth_economy }
+	}
+	ai_will_do = { 
+		factor = 1 
+	}
+}
+collectivised_market_reforms = {
+	picture = "collectivised_market_reforms"
+	potential = {
+		NOT = { has_country_flag = collectivised_market_reforms }
+		has_country_flag = collectivised_economy
+		ruling_party_ideology = communist_social
+		has_country_modifier = { name = collectivised_3 }
+		OR = {
+			government = proletarian_dictatorship
+			government = proletarian_dictatorship1
+		}
+	}		
+	allow = {	
+		cold_war =  1
+		heavy_mining = 1
+		war = no
+		election = no
+		NOT = { has_country_modifier = in_bankrupcy }
+		NOT = { has_country_modifier = five_year_plan }
+		NOT = { communist = 60 }
+	}
+	effect = {
+		add_country_flag = { name = collectivised_market_reforms }
+	}
+	ai_will_do = { 
+		factor = 1 
+	}
+}
+
+#Economic Corruption - redistribtuion of power and wealth to the government and elites
+economic_corruption = {
+	picture = "economic_corruption"
+	potential = {
+		NOT = { has_country_flag = stockmarket_economy }
+		NOT = { has_country_flag = co_op_interest }
+		NOT = { has_country_flag = stakeholder_economy }
+		NOT = { has_country_flag = growth_economy }
+		NOT = { has_country_flag = economic_corruption }
+		NOT = { has_country_flag = collectivised_economy }
+		NOT = {
+			OR = {
+				government = socialist_democracy
+				OR = { government = democracy NOT = { tag = RUS } }
+				government = hms_government
+				government = democracy1
+				government = hms_government1
+				government = proletarian_dictatorship
+				government = proletarian_dictatorship1
+			}
+		}
+	}
+	allow = {
+		international_financial_institutions = 1
+		gold_standard = 1
+		OR = {
+			ruling_party_ideology = conservative
+			ruling_party_ideology = traditionalist
+			ruling_party_ideology = populist
+			ruling_party_ideology = nationalist
+		}
+	}
+	effect = {
+		add_country_flag = { name = economic_corruption }
+		clr_country_flag = { name = collectivised_economy } 
+		clr_country_flag = { name = stakeholder_economy } 
+		clr_country_flag = { name = co_op_interest } 
+		clr_country_flag = { name = stockmarket_economy }
+		clr_country_flag = { name = growth_economy }
+	}
+}
+end_economic_corruption = {
+	picture = "end_economic_corruption"
+	potential = {
+		OR = {
+			AND = {
+				has_country_flag = economic_corruption
+				NOT = { has_country_modifier = massive_government_corruption }
+				NOT = { has_country_modifier = large_government_corruption } 
+				NOT = { has_country_modifier = medium_government_corruption } 
+				OR = {
+						government = socialist_democracy
+						government = democracy
+						government = hms_government
+						government = democracy1
+						government = hms_government1
+						government = proletarian_dictatorship
+						government = proletarian_dictatorship1
+				}
+			}
+			has_country_flag = growth_economy
+		}
+	}
+	allow = {
+		average_consciousness = 8
+		average_militancy = 6
+		OR = {
+			has_country_modifier = in_bankrupcy
+			gender_rights = feminist
+			gender_rights = gender_promotive
+		}
+		OR = { 
+			socialist = 40
+			communist = 40
+			progressive = 40
+			communist_social = 60
+			liberal = 60
+			nationalist = 60
+		}
+		OR = {
+			ruling_party_ideology = socialist
+			ruling_party_ideology = communist
+			ruling_party_ideology = liberal
+			ruling_party_ideology = progressive
+		}
+	}
+	effect = {
+		add_country_flag = { name = end_economic_corruption }
+		add_country_modifier = { name = corrupt_4 duration = -1 }
+		remove_country_modifier = { name = corrupt_3 }
+	}
+}
+
+#Co-operative Economy - slow redistribtuion away from eiltes with efficiency bonuses
+co_op_interest = {
+	picture = "co_op_interest"
+	potential = {
+		NOT = { has_country_flag = stockmarket_economy }
+		NOT = { has_country_flag = co_op_interest }
+		NOT = { has_country_flag = economic_corruption }
+		OR = {
+			ruling_party_ideology = communist
+			ruling_party_ideology = communist_social
+			ruling_party_ideology = socialist
+			ruling_party_ideology = progressive
+		}
+		OR = {
+			AND = {
+				year = 2015
+				government = proletarian_dictatorship
+				ruling_party_ideology = communist
+			}
+			OR = {
+				government = socialist_democracy
+				government = democracy
+				government = hms_government
+				government = democracy1
+				government = hms_government1
+			}
+		}
+	}		
+	allow = {	
+		new_keynesian = 1
+		high_speed_uni_network = 1
+		colour_revolution = 1
+		war = no
+		election = no
+	}
+	effect = {
+		add_country_flag = { name = co_op_interest }
+		clr_country_flag = { name = economic_corruption }
+		clr_country_flag = { name = collectivised_economy } 
+		clr_country_flag = { name = stakeholder_economy }
+		clr_country_flag = { name = stockmarket_economy }
+		clr_country_flag = { name = growth_economy }
+	}
+	ai_will_do = { 
+		factor = 1 
+	}
+}
+
+grow_co_ops = {
+	picture = "grow_co_ops"
+	potential = {
+		OR = {
+			AND = { has_country_flag = co_op_interest has_province_modifier = early_co_ops }
+			has_province_modifier = expanding_co_ops
+		}
+		OR = {
+			AND = {
+				year = 2015
+				government = proletarian_dictatorship
+				ruling_party_ideology = communist
+			}
+			AND = {
+				OR = {
+					government = socialist_democracy
+					government = democracy
+					government = hms_government
+					government = democracy1
+					government = hms_government1
+				}
+			}
+		}
+		NOT = { has_country_flag = grow_co_ops }
+	}	
+	allow = {	
+		money = 200000
+		war = no
+		election = no
+		OR = {
+			ruling_party_ideology = communist
+			ruling_party_ideology = communist_social
+			ruling_party_ideology = socialist
+			ruling_party_ideology = progressive
+		}
+	}
+	effect = {
+		prestige = 5
+		money = -200000
+		add_country_flag = { name = grow_co_ops }
+		any_owned = {
+			limit = {
+				NOT = { 
+					OR = {
+						has_province_modifier = full_co_ops
+						has_province_modifier = established_co_ops
+						has_province_modifier = expanding_co_ops
+						has_province_modifier = only_co_ops
+						has_country_modifier = early_co_ops
+					}
+				}
+			}
+			add_province_modifier = { name = early_co_ops duration = -1 }
+		}			
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+	
+fund_co_ops = {
+	picture = "fund_co_ops"
+	potential = {
+		has_country_flag = grow_co_ops
+		NOT = { has_country_flag = fund_co_ops }
+	}	
+	allow = {
+		money = 200000
+		war = no
+		election = no
+		OR = {
+			ruling_party_ideology = communist
+			ruling_party_ideology = communist_social
+			ruling_party_ideology = socialist
+			ruling_party_ideology = progressive
+		}
+	}
+	effect = {
+		prestige = 5
+		money = -200000
+		add_country_flag = { name = fund_co_ops }
+		remove_country_flag = { name grow_co_ops }
+		any_owned = {
+			limit = {
+				NOT = { 
+					OR = {
+						has_province_modifier = full_co_ops
+						has_province_modifier = established_co_ops
+						has_province_modifier = only_co_ops
+						has_country_modifier = expanding_co_ops
+					}
+				}
+			}
+			add_province_modifier = { name = expanding_co_ops duration = -1 }
+			remove_province_modifier = { name = early_co_ops }
+		}			
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+	
+partner_co_ops = {
+	picture = "partner_co_ops"
+	potential = {
+		has_country_flag = fund_co_ops
+		NOT = { has_country_flag = partner_co_ops }
+	}	
+	allow = {
+		money = 200000
+		war = no
+		election = no
+		OR = {
+			ruling_party_ideology = communist
+			ruling_party_ideology = communist_social
+			ruling_party_ideology = socialist
+			ruling_party_ideology = progressive
+		}
+	}
+	effect = {
+		prestige = 5
+		money = -200000
+		add_country_flag = { name = partner_co_ops }
+		remove_country_flag = { name fund_co_ops }
+		any_owned = {
+			limit = {
+				NOT = { 
+					OR = {
+						has_province_modifier = full_co_ops
+						has_province_modifier = established_co_ops
+						has_province_modifier = only_co_ops
+					}
+				}
+			}
+			add_province_modifier = { name = established_co_ops duration = -1 }
+			remove_province_modifier = { name = early_co_ops }
+			remove_province_modifier = { name = expanding_co_ops }
+		}			
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+	
+instatutionalise_co_ops = {
+	picture = "instatutionalise_co_ops"
+	potential = {
+		has_country_flag = partner_co_ops
+		NOT = { has_country_flag = instatutionalise_co_ops }
+		OR = {
+			AND = { has_country_flag = sovereign_wealth_fund has_country_modifier = employee_fund }
+			NOT = { has_country_flag = sovereign_wealth_fund }
+		}
+
+	}	
+	allow = {
+		money = 200000
+		war = no
+		election = no
+		OR = {
+			ruling_party_ideology = communist
+			ruling_party_ideology = communist_social
+			ruling_party_ideology = socialist
+			ruling_party_ideology = progressive
+		}
+	}
+	effect = {
+		prestige = 5
+		money = -200000
+		add_country_flag = { name = instatutionalise_co_ops }
+		remove_country_flag = { name = partner_co_ops }
+		remove_country_modifier = { name = stakeholder_1 }
+		remove_country_modifier = { name = stakeholder_2 }
+		remove_country_modifier = { name = stakeholder_3 }
+		remove_country_modifier = { name = collectivised_1 }
+		remove_country_modifier = { name = collectivised_2 }
+		remove_country_modifier = { name = collectivised_3 }
+		remove_country_modifier = { name = corrupt_1 }
+		remove_country_modifier = { name = corrupt_2 }
+		remove_country_modifier = { name = corrupt_3 }
+		remove_country_modifier = { name = stockmarket_1 }
+		remove_country_modifier = { name = stockmarket_2 }
+		remove_country_modifier = { name = stockmarket_3 }
+		remove_country_modifier = { name = stockmarket_4 }
+		remove_country_modifier = { name = stockmarket_5 }
+		any_owned = {
+			limit = {
+				NOT = { 
+					OR = {
+						has_country_modifier = full_co_ops
+						has_province_modifier = only_co_ops
+					}
+				}
+			}
+			add_province_modifier = { name = full_co_ops duration = -1 }
+			remove_province_modifier = { name = early_co_ops }
+			remove_province_modifier = { name = expanding_co_ops }
+			remove_province_modifier = { name = established_co_ops }
+		}			
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+		
+total_co_ops = {
+	picture = "total_co_ops"
+	potential = {
+		has_country_flag = instatutionalise_co_ops
+		NOT = { has_country_flag = total_co_ops }
+	}	
+	allow = {
+		money = 200000
+		war = no
+		election = no
+		OR = {
+			ruling_party_ideology = communist
+			ruling_party_ideology = communist_social
+			ruling_party_ideology = socialist
+			ruling_party_ideology = progressive
+		}
+	}
+	effect = {
+		prestige = 5
+		money = -200000
+		add_country_flag = { name = total_co_ops }
+		remove_country_flag = { name instatutionalise_co_ops }
+		any_owned = {
+			limit = {
+				NOT = { has_province_modifier = only_co_ops }
+			}
+			add_province_modifier = { name = only_co_ops duration = -1 }
+			remove_province_modifier = { name = early_co_ops }
+			remove_province_modifier = { name = expanding_co_ops }
+			remove_province_modifier = { name = established_co_ops }
+			remove_province_modifier = { name = full_co_ops }
+		}		
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+#Growth Economics - growth and societal progress for developing nations
+growth_economy = {
+	picture = "growth_economy"
+	potential = {
+		industrial_score = 200
+		NOT = { has_country_flag = stockmarket_economy }
+		NOT = { has_country_flag = co_op_interest }
+		NOT = { has_country_flag = stakeholder_economy }
+		NOT = { has_country_flag = growth_economy }
+		NOT = { has_country_flag = collectivised_economy }
+		NOT = {
+			OR = {
+				capital_scope = europe
+				capital_scope = north_america
+				rank = 36
+			}
+		}
+	}
+	allow = {
+		dollar_standard = 1
+		cold_war = 1
+		election = no
+		war = no
+		has_country_modifier = { name = nprlow }
+		NOT = {
+			OR = {
+				ruling_party_ideology = tradtional
+				ruling_party_ideology = nationalist
+				ruling_party_ideology = populist
+				ruling_party_ideology = communist
+				ruling_party_ideology = conservative
+			}
+		}
+	}
+	effect = {
+		add_country_flag = { name = growth_economy }
+		clr_country_flag = { name = economic_corruption }
+		clr_country_flag = { name = collectivised_economy } 
+		clr_country_flag = { name = stakeholder_economy }
+		clr_country_flag = { name = stockmarket_economy }
+		remove_country_modifier = { name = corrupt_1 }
+	}
+	ai_will_do = { 
+		factor = 1 
+	}
+}
+increase_growth_economy = {
+	picture = "increase_growth_economy"
+	potential = {
+		has_country_flag = growth_economy
+		has_country_modifier = growth_2
+		NOT = { has_country_flag = increase_growth_economy }
+		NOT = { has_country_flag = commit_growth_economy }
+		OR = {
+			ruling_party_ideology = liberal
+			ruling_party_ideology = progressive
+			ruling_party_ideology = communist_social
+			ruling_party_ideology = big_tent
+		}
+		NOT = {
+			OR = {
+				capital_scope = europe
+				capital_scope = north_america
+				rank = 36
+			}
+		}
+	}
+	allow = {
+		OR = { globalization =  1 industrial_score = 400 }
+		cold_war = 1
+		election = no
+		war = no
+		has_country_modifier = { name = nprlow }
+	}
+	effect = {
+		add_country_flag = { name = increase_growth_economy }
+		add_country_modifier = { name = stockcrash duration = 12 }
+				remove_country_modifier = { name = corrupt_2 }
+	}
+	ai_will_do = { 
+		factor = 1 
+	}
+}
+commit_growth_economy = {
+	picture = "commit_growth_economy"
+	potential = {
+		has_country_flag = growth_economy
+		has_country_flag = increase_growth_economy
+		has_country_modifier = growth_3
+		NOT = { has_country_flag = commit_growth_economy }
+		OR = {
+			ruling_party_ideology = liberal
+			ruling_party_ideology = progressive
+			ruling_party_ideology = socialist
+			ruling_party_ideology = communist_social
+			ruling_party_ideology = big_tent
+		}
+		NOT = {
+			OR = {
+				capital_scope = europe
+				capital_scope = north_america
+				rank = 36
+			}
+		}
+	}
+	allow = {
+		OR = { political_polarization = 1 industrial_score = 1000 }
+		cold_war = 1
+		election = no
+		war = no
+		has_country_modifier = { name = nprlow }
+	}
+	effect = {
+		add_country_flag = { name = commit_growth_economy }
+		clr_country_flag = { name = increase_growth_economy }
+		add_country_modifier = { name = stockcrash duration = 12 }
+		remove_country_modifier = { name = corrupt_3 }
+	}
+	ai_will_do = { 
+		factor = 1 
+	}
+}
+
+#Restructure Economy
+restructure_economy = {
+	picture = "restructure_economy"
+	potential = {
+		OR = {
+			AND = {
+				has_country_flag = stockmarket_economy
+				OR = {
+					communist = 40
+					communist_social = 40
+					socialist = 40
+				}	
+				OR = {
+					ruling_party_ideology = communist
+					AND = { ruling_party_ideology = communist_social gender_rights = feminist }
+					AND = { ruling_party_ideology = socialist gender_rights = feminist }
+					AND = { ruling_party_ideology = nationalist gender_rights = feminist }
+					has_country_modifier = in_bankrupcy
+				}
+			}
+			AND = { 
+				has_country_flag = co_op_interest
+				NOT = { gender_rights = feminist }
+				has_country_modifier = in_bankrupcy
+				OR = {
+					ruling_party_ideology = tradtional
+					ruling_party_ideology = populist
+					ruling_party_ideology = conservative
+				}
+				NOT = {
+					OR = { 
+						socialist = 50
+						communist = 50
+						communist_social = 50
+					}
+				}
+			}
+			AND = {
+				has_country_flag = stakeholder_economy
+				has_country_modifier = in_bankrupcy
+				OR = {
+					ruling_party_ideology = tradtional
+					ruling_party_ideology = populist
+					ruling_party_ideology = conservative
+				}
+				NOT = { gender_rights = feminist }
+			}
+			AND = {
+				has_country_flag = growth_economy
+				ruling_party_ideology = tradtional
+			}
+			AND = {
+				has_country_flag = economic_corruption
+				OR = { has_country_modifier = in_bankrupcy rank = 24 }
+				OR = {
+					ruling_party_ideology = communist
+					ruling_party_ideology = progressive
+					ruling_party_ideology = liberal
+					ruling_party_ideology = socialist
+				}
+			}
+			AND = {
+				has_country_flag = collectivised_economy
+				OR = {
+					AND = { NOT = { government = proletarian_dictatorship } NOT = { government = proletarian_dictatorship1 } }
+					has_country_flag = { name = partner_co_ops }
+				}
+			}
+		}
+	}
+	allow = {
+		average_consciousness = 8
+		average_militancy = 6
+		election = no
+		war = no
+		NOT = { money 2000000 }
+	}
+	effect = {
+		add_country_modifier = { name = stockcrash duration = 24 }
+		clr_country_flag = { name = economic_corruption }
+		clr_country_flag = { name = collectivised_economy } 
+		clr_country_flag = { name = stakeholder_economy } 
+		clr_country_flag = { name = co_op_interest } 
+		clr_country_flag = { name = stockmarket_economy }
+		clr_country_flag = { name = growth_economy }
+		clr_country_flag = { name = increase_growth_economy }
+		clr_country_flag = { name = commit_growth_economy }
+		clr_country_flag = { name = grow_co_ops }
+		clr_country_flag = { name = fund_co_ops }
+		clr_country_flag = { name = partner_co_ops }
+		clr_country_flag = { name = instatutionalise_co_ops }
+		clr_country_flag = { name = total_co_ops }
+		remove_country_modifier = { name = co_op_2 }
+		remove_country_modifier = { name = co_op_3 }
+		remove_country_modifier = { name = co_op_4 }
+		remove_country_modifier = { name = co_op_5 }
+		remove_country_modifier = { name = stakeholder_1 }
+		remove_country_modifier = { name = stakeholder_2 }
+		remove_country_modifier = { name = stakeholder_3 }
+		remove_country_modifier = { name = collectivised_1 }
+		remove_country_modifier = { name = collectivised_2 }
+		remove_country_modifier = { name = collectivised_3 }
+		remove_country_modifier = { name = corrupt_1 }
+		remove_country_modifier = { name = corrupt_2 }
+		remove_country_modifier = { name = corrupt_3 }
+		remove_country_modifier = { name = stockmarket_1 }
+		remove_country_modifier = { name = stockmarket_2 }
+		remove_country_modifier = { name = stockmarket_3 }
+		remove_country_modifier = { name = stockmarket_4 }
+		remove_country_modifier = { name = stockmarket_5 }
+		remove_country_modifier = { name = growth_1 }
+		remove_country_modifier = { name = growth_2 }
+		remove_country_modifier = { name = growth_3 }
+		remove_country_modifier = { name = growth_4}
+		remove_country_modifier = { name = growth_5 }
+		any_owned = { limit = { has_province_modifier = stockmarket_deregulate } remove_province_modifier = { name = stockmarket_deregulate } }
+	}
+	ai_will_do = { 
+		factor = 1 
+	}
+}

@@ -2649,7 +2649,6 @@ AND = { NOT = { literacy = 0.50 }
 literacy = 0.30 } }
 
 NOT = { has_country_modifier = low_societal_corruption }
-		}
 
 	option = {
 		name = "Crimes are bad... most of the time"
@@ -5263,7 +5262,7 @@ country_event = {
 	picture = "deforestation"
 	
 	
-	trigger = {
+trigger = {
 
 year = 2060
 
