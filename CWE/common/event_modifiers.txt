@@ -384,7 +384,7 @@ icon = 6
 }
 
 vtshigh = {
-prestige = -0.1 
+prestige = -0.1
 icon = 9
 }
 
