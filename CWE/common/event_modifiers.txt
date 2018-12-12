@@ -2,11 +2,39 @@
 # scriptable and usable for event-system below.
 ##################################################################################################
 
+
+### Forex ###
+
+buy_forex = {
+tax_efficiency = -0.05
+factory_owner_cost = -0.50
+factory_cost = -0.50
+import_cost = -0.50
+icon = 9
+}
+
+sell_forex = {
+tax_efficiency = 0.05
+factory_owner_cost = 0.50
+factory_cost = 0.50
+import_cost = 0.50
+icon = 9
+}
+
+### China ###
+
+one_child_policy_mod = {
+global_population_growth = -0.001
+goods_demand = -0.1
+icon = 18
+}
+
 ### Promote Separatism ###
 
 instigate_rebels = {
 badboy = 0.05
 tax_efficiency = -0.03
+icon = 15
 }
 
 instigating_rebels = {
@@ -15,6 +43,7 @@ local_factory_throughput = -0.25
 local_ruling_party_support = -0.25
 pop_consciousness_modifier = 0.02
 pop_militancy_modifier = 0.02
+icon = 18
 }
 
 ### Lobby Groups ###
@@ -2591,27 +2620,24 @@ icon = 7
 ### Generic World Tensions Levels ###
 
 world_high = {
-global_pop_consciousness_modifier = -0.2
-political_reform_desire = 0.25
-non_accepted_pop_militancy_modifier = 0.2
+global_pop_consciousness_modifier = 0.03
+political_reform_desire = 0.50
+non_accepted_pop_militancy_modifier = 0.1
 factory_throughput = -0.75
-goods_demand = 0.10
 research_points = -0.1
 badboy = 0.01
 icon = 16
 }
 
 world_medium = {
-pop_consciousness_modifier = -0.10
-factory_throughput = -0.25
-political_reform_desire = 0.125
+global_pop_consciousness_modifier = 0.02
+political_reform_desire = 0.25
 non_accepted_pop_militancy_modifier = 0.05
 goods_demand = 0.20
 icon = 16
 }
 
 world_low = {
-pop_consciousness_modifier = 0.10
 non_accepted_pop_militancy_modifier = -0.05
 factory_throughput = 0.25
 goods_demand = 0.40
@@ -3538,6 +3564,14 @@ icon = 18
 
 bretton_woods_effect = {
 local_RGO_throughput = -0.50
+icon = 12
+}
+
+increase_gold = {
+local_RGO_throughput = 0.50
+local_RGO_output = 0.25
+rich_income_modifier = 0.25
+icon = 11
 }
 
 ### European Union ###
@@ -3884,18 +3918,18 @@ icon = 16
 ### Cold War Tensions Levels ###
 
 cold_war_hot = {
-global_pop_consciousness_modifier = 0.5
+global_pop_consciousness_modifier = 0.04
 icon = 16
 }
 
 cold_war_high = {
-global_pop_consciousness_modifier = 0.25
+global_pop_consciousness_modifier = 0.02
 badboy = 0.01
 icon = 16
 }
 
 cold_war_medium = {
-global_pop_consciousness_modifier = 0.125
+global_pop_consciousness_modifier = 0.01
 icon = 16
 }
 
@@ -4975,7 +5009,7 @@ import_cost = 0.5
 factory_throughput = -0.25
 factory_owner_cost = 0.20
 #tax_efficiency = -0.10
-icon = 18
+icon = 12
 }
 
 thirdworldnation = { goods_demand = -0.25 icon = 18 }
@@ -5571,7 +5605,12 @@ natural_disaster = {
 }
 famine = {
 	population_growth = -0.002
-	icon = 14
+	icon = 20
+}
+
+global_famine = {
+	global_population_growth = -0.002
+	icon = 18
 }
 
 blood_and_iron_mine = {
@@ -6100,6 +6139,7 @@ bretton_system = {
 	loan_interest = -0.5
 	prestige = 0.02
 	max_loan_modifier = -0.25
+	factory_output = 0.1
 	icon = 9
 }
 
